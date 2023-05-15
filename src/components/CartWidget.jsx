@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+import { ShoppingCart } from '@mui/icons-material';
 
-function CartWidget() {
+function CartWidget({ cantidades }) {
     return (
-        <div>CartWidget</div>
-    )
+        <>
+            <ShoppingCart />
+            {cantidades}
+        </>
+    );
 }
 
-export default CartWidget
+export default CartWidget;

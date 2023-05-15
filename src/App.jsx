@@ -7,7 +7,7 @@ export default function App() {
     return (
         <>
             <NavBar />
-            <h2 className='titulo'><ItemListContainer titulo="Bienvenido a la tienda de CaraRota"/></h2>
+            <h2 className='titulo'><ItemListContainer greeting="Bienvenido a la tienda de CaraRota"/></h2>
         </>
     )
 }

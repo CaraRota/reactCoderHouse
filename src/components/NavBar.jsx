@@ -25,12 +25,14 @@ export default function NavBar() {
                     <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
                         Lo de CaraRota
                     </Typography>
-                    <Button color="inherit">Espadas</Button>
-                    <Button color="inherit">Lanzas</Button>
-                    <Button color="inherit">Arcos</Button>
-                    <Button color="inherit">Armaduras</Button>
-                    <Button color="inherit">Login</Button>
+                    <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                        <Button color="inherit">Espadas</Button>
+                        <Button color="inherit">Lanzas</Button>
+                        <Button color="inherit">Arcos</Button>
+                        <Button color="inherit">Armaduras</Button>
+                    </Typography>
                     <CartWidget cantidades="0" />
+                    <Button color="inherit">Login</Button>
                 </Toolbar>
             </AppBar>
         </Box>

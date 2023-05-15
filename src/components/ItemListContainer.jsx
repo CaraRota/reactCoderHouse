@@ -1,7 +1,7 @@
 import React from 'react'
 
-export default function ItemListContainer({ titulo }) {
+export default function ItemListContainer({ greeting }) {
     return (
-        <>{titulo}</>
+        <>{greeting}</>
     )
 }

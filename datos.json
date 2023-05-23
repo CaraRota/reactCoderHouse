@@ -1,0 +1,114 @@
+[
+    {
+        "id": 1,
+        "nombre": "Celular Samsung A03s",
+        "categoria": "Motorola",
+        "descripcion": "Lorem ipsun dolor sit amet",
+        "precio": 75,
+        "imagen": "none"
+    },
+    {
+        "id": 2,
+        "nombre": "Celular Samsung A04",
+        "categoria": "Motorola",
+        "descripcion": "Lorem ipsun dolor sit amet",
+        "precio": 120,
+        "imagen": "none"
+    },
+    {
+        "id": 3,
+        "nombre": "Celular Samsung A04s",
+        "categoria": "Motorola",
+        "descripcion": "Lorem ipsun dolor sit amet",
+        "precio": 95,
+        "imagen": "none"
+    },
+    {
+        "id": 4,
+        "nombre": "Celular Samsung A32",
+        "categoria": "Samsung",
+        "descripcion": "Lorem ipsun dolor sit amet",
+        "precio": 225,
+        "imagen": "none"
+    },
+    {
+        "id": 5,
+        "nombre": "Celular Samsung A50s",
+        "categoria": "Samsung",
+        "descripcion": "Lorem ipsun dolor sit amet",
+        "precio": 345,
+        "imagen": "none"
+    },
+    {
+        "id": 6,
+        "nombre": "Celular Samsung A72",
+        "categoria": "Samsung",
+        "descripcion": "Lorem ipsun dolor sit amet",
+        "precio": 880,
+        "imagen": "none"
+    },
+    {
+        "id": 7,
+        "nombre": "Celular Motorola E13",
+        "categoria": "Motorola",
+        "descripcion": "Lorem ipsun dolor sit amet",
+        "precio": 75,
+        "imagen": "none"
+    },
+    {
+        "id": 8,
+        "nombre": "Celular Motorola E20",
+        "categoria": "Motorola",
+        "descripcion": "Lorem ipsun dolor sit amet",
+        "precio": 95,
+        "imagen": "none"
+    },
+    {
+        "id": 9,
+        "nombre": "Celular Motorola E22i",
+        "categoria": "Motorola",
+        "descripcion": "Lorem ipsun dolor sit amet",
+        "precio": 125,
+        "imagen": "none"
+    },
+    {
+        "id": 10,
+        "nombre": "Celular Motorola G23",
+        "categoria": "Motorola",
+        "descripcion": "Lorem ipsun dolor sit amet",
+        "precio": 265,
+        "imagen": "none"
+    },
+    {
+        "id": 11,
+        "nombre": "Celular Motorola G72",
+        "categoria": "Motorola",
+        "descripcion": "Lorem ipsun dolor sit amet",
+        "precio": 645,
+        "imagen": "none"
+    },
+    {
+        "id": 12,
+        "nombre": "Celular Motorola G82",
+        "categoria": "Motorola",
+        "descripcion": "Lorem ipsun dolor sit amet",
+        "precio": 860,
+        "imagen": "none"
+    },
+    {
+        "id": 13,
+        "nombre": "Celular Motorola Edge 30 Neo",
+        "categoria": "Motorola",
+        "descripcion": "Lorem ipsun dolor sit amet",
+        "precio": 990,
+        "imagen": "none"
+    },
+    {
+        "id": 14,
+        "nombre": "Celular Motorola G42",
+        "categoria": "Motorola",
+        "descripcion": "Lorem ipsun dolor sit amet",
+        "precio": 540,
+        "imagen": "none"
+    }
+]

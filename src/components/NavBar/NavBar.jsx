@@ -36,8 +36,7 @@ function NavBar() {
                         >
                             {nombreTienda}
                         </Typography>
-                        <NavBarMenu categorias={categorias} nombreTienda={nombreTienda}>
-                        </NavBarMenu>
+                        <NavBarMenu categorias={categorias} nombreTienda={nombreTienda} />
                         <Box sx={{ flexGrow: 0 }}>
                             <CartWidget cantidades="0" />
                         </Box>

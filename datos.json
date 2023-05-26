@@ -5,7 +5,7 @@
         "categoria": "Motorola",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 75,
-        "imagen": "none"
+        "imagen": "./src/assets/a03s.jpg"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "categoria": "Motorola",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 120,
-        "imagen": "none"
+        "imagen": "./src/assets/04.jpg"
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@
         "categoria": "Motorola",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 95,
-        "imagen": "none"
+        "imagen": "./src/assets/a04s.jfif"
     },
     {
         "id": 4,

@@ -1,11 +1,15 @@
 import React from 'react';
-import { ShoppingCart } from '@mui/icons-material';
+import { IconButton, Badge } from '@mui/material';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 function CartWidget({ cantidades }) {
     return (
         <>
-            <ShoppingCart />
-            {cantidades}
+            <IconButton aria-label="cart">
+                <Badge badgeContent={cantidades} color="secondary">
+                    <ShoppingCartIcon />
+                </Badge>
+            </IconButton>
         </>
     );
 }

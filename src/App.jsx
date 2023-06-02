@@ -17,11 +17,10 @@ export default function App() {
                 <Routes>
                     <Route path='/' element={<HomePage />} />
                     <Route path='/ItemList' element={<ItemListPage />} />
-                    <Route path='/Item' element={<ItemPage />} />
+                    <Route path='/Item/:id' element={<ItemPage />} />
                     <Route path="*" element={<ErrorPage />} />
                     <Route />
                 </Routes>
-
             </Router>
         </>
     )

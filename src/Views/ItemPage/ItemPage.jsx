@@ -1,8 +1,9 @@
 import React from 'react'
+import Item from "../../components/itemlistcontainer/Item"
 
 function ItemPage() {
     return (
-        <div>ItemPage</div>
+        <Item />
     )
 }
 

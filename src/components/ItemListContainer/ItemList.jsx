@@ -12,27 +12,24 @@ function ItemList({ products }) {
                 {products.map((product) => (
                     <div className='cards' key={product.id}>
                         <Card sx={{ maxWidth: 345 }}>
-                            <Link to={`/Item/${product.id}`} >
-                                <CardActionArea>
+                            <CardActionArea>
+                                <Link to={`/Item/${product.id}`} >
                                     <CardMedia
                                         component="img"
-                                        height="200"
+                                        style={{ maxWidth: '200px', maxHeight: '200px', objectFit: 'contain'}}
                                         image={product.imagen}
-                                        alt={product.descripcion}
+                                        alt={product.nombre}
                                     />
-                                    <CardContent>
-                                        <Typography gutterBottom variant="h5" component="div">
-                                            {product.nombre}
-                                        </Typography>
-                                        <Typography variant="body2" color="text.secondary">
-                                            {product.descripcion}
-                                        </Typography>
-                                        <Typography>
-                                            {product.precio} {currency}
-                                        </Typography>
-                                    </CardContent>
-                                </CardActionArea>
-                            </Link>
+                                </Link>
+                                <CardContent>
+                                    <Typography gutterBottom variant="h5" component="div">
+                                        {product.nombre}
+                                    </Typography>
+                                    <Typography>
+                                        {product.precio} {currency}
+                                    </Typography>
+                                </CardContent>
+                            </CardActionArea>
                             <AmountBtnBar />
                         </Card>
                     </div>

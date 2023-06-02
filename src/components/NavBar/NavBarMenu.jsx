@@ -1,10 +1,6 @@
 import React from 'react'
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
+import { Menu, MenuItem, Typography, IconButton, Box } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import Box from '@mui/material/Box';
 import AdbIcon from '@mui/icons-material/Adb';
 import { useState } from "react"
 

@@ -1,11 +1,8 @@
 import * as React from 'react';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { CardActionArea, useRadioGroup } from '@mui/material';
+import { CardActionArea, Typography, CardMedia, CardContent, Card } from '@mui/material';
 import "../../css/ItemList.css"
 import { Link } from 'react-router-dom';
+import AmountBtnBar from '../buttons/AmountBtnBar';
 
 function ItemList({ products }) {
     const currency = "USD"
@@ -14,8 +11,8 @@ function ItemList({ products }) {
             <ul>
                 {products.map((product) => (
                     <div className='cards' key={product.id}>
-                        <Link to={`/Item/${product.id}`} >
-                            <Card sx={{ maxWidth: 345 }}>
+                        <Card sx={{ maxWidth: 345 }}>
+                            <Link to={`/Item/${product.id}`} >
                                 <CardActionArea>
                                     <CardMedia
                                         component="img"
@@ -35,8 +32,9 @@ function ItemList({ products }) {
                                         </Typography>
                                     </CardContent>
                                 </CardActionArea>
-                            </Card>
-                        </Link>
+                            </Link>
+                            <AmountBtnBar />
+                        </Card>
                     </div>
                 ))}
             </ul>

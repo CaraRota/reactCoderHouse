@@ -39,4 +39,12 @@
 .cart-number {
   display: flex;
   align-items: center;
+}
+
+.nombreTienda {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  justify-content: start;
+  align-items: center;
 }/*# sourceMappingURL=NavBar.css.map */

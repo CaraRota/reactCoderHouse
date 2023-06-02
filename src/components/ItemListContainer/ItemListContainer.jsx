@@ -3,7 +3,7 @@ import axios from 'axios'
 import ItemList from './ItemList';
 import { useState, useEffect } from 'react';
 
-export default function ItemListContainer({ greeting }) {
+const ItemListContainer = ({ greeting }) => {
     const [products, setProducts] = useState([])
 
     useEffect(() => {
@@ -20,3 +20,5 @@ export default function ItemListContainer({ greeting }) {
         </>
     )
 }
+
+export default ItemListContainer;

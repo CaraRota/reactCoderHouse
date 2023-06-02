@@ -4,17 +4,37 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 
 function Item() {
-    // let { id } = useParams()
-    // const [item, setItem] = useState({})
+    let { id } = useParams()
+    const [item, setItem] = useState({})
 
-    // useEffect(() => {
-    //     axios("../../../datos.json").then((res) =>
-    //         setItem(res.data)
-    //     )
-    // }, [id])
+    useEffect(() => {
+        axios("../../../datos.json").then((res) =>
+            setItem(res.data[id--])
+        )
+    }, [id])
     return (
         <>
-        Hola
+            <Card sx={{ maxWidth: 345 }}>
+                <CardActionArea>
+                    <CardMedia
+                        component="img"
+                        height="200"
+                        // image={item.imagen}
+                        alt={item.descripcion}
+                    />
+                    <CardContent>
+                        <Typography gutterBottom variant="h5" component="div">
+                            {item.nombre}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                            {item.descripcion}
+                        </Typography>
+                        <Typography>    
+                            {item.precio}
+                        </Typography>
+                    </CardContent>
+                </CardActionArea>
+            </Card>
         </>
     )
 }

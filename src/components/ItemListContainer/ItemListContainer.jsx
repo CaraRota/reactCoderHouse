@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
+import Data from "../../../datos.json"
 import ItemList from './ItemList';
 import { useParams } from 'react-router-dom';
 
@@ -20,7 +21,7 @@ const ItemListContainer = ({ greeting }) => {
         fetchData()
     }, [])
 
-    const filtrarCategoria = productos.filter((producto) => producto.category === category)
+    const filtrarCategoria = Data.filter((producto) => producto.category === category)
 
     return (
         <>

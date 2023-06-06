@@ -5,20 +5,9 @@ import CartWidget from "./CartWidget"
 import NavBarMenu from './NavBarMenu';
 import "../../css/NavBar.css"
 import { Link } from 'react-router-dom';
-import { useState, useEffect } from 'react';
-import axios from 'axios';
-import { useParams } from 'react-router-dom';
 
 const NavBar = () => {
     const nombreTienda = "Samsung";
-    const [categoria, setCategoria] = useState({})
-    let { id } = useParams()
-
-    useEffect(() => {
-        axios("../../../datos.json").then((res) =>
-            setCategoria(res.data[id--])
-        )
-    }, [id])
 
     return (
         <nav>
@@ -43,7 +32,7 @@ const NavBar = () => {
                                 {nombreTienda}
                             </Typography>
                         </Link>
-                        <NavBarMenu categorias={categoria} nombreTienda={nombreTienda} />
+                        <NavBarMenu nombreTienda={nombreTienda} />
                         <Box sx={{ flexGrow: 0 }}>
                             <CartWidget cantidades="0" />
                         </Box>

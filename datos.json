@@ -5,7 +5,7 @@
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 75,
-        "imagen": "./src/assets/a03s.jpg",
+        "imagen": "/assets/a03s.jpg",
         "stock": 25
     },
     {
@@ -14,7 +14,7 @@
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 120,
-        "imagen": "./src/assets/04.jpg",
+        "imagen": "/assets/04.jpg",
         "stock": 20
     },
     {
@@ -23,7 +23,7 @@
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 95,
-        "imagen": "./src/assets/04s.jpg",
+        "imagen": "/assets/04s.jpg",
         "stock": 10
     },
     {
@@ -32,7 +32,7 @@
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 225,
-        "imagen": "./src/assets/a32.jpg",
+        "imagen": "/assets/a32.jpg",
         "stock": 8
     },
     {
@@ -41,7 +41,7 @@
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 345,
-        "imagen": "./src/assets/a52s.jpg",
+        "imagen": "/assets/a52s.jpg",
         "stock": 3
     },
     {
@@ -50,7 +50,7 @@
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 880,
-        "imagen": "./src/assets/a72.jpg",
+        "imagen": "/assets/a72.jpg",
         "stock": 12
     },
     {
@@ -59,7 +59,7 @@
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 75,
-        "imagen": "./src/assets/e13.jpg",
+        "imagen": "/assets/e13.jpg",
         "stock": 2
     },
     {
@@ -68,7 +68,7 @@
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 95,
-        "imagen": "./src/assets/e20.jpg",
+        "imagen": "/assets/e20.jpg",
         "stock": 1
     },
     {
@@ -77,7 +77,7 @@
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 125,
-        "imagen": "./src/assets/e22i.jpg",
+        "imagen": "/assets/e22i.jpg",
         "stock": 8
     },
     {
@@ -86,7 +86,7 @@
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 265,
-        "imagen": "./src/assets/g23.jpg",
+        "imagen": "/assets/g23.jpg",
         "stock": 3
     },
     {
@@ -95,7 +95,7 @@
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 645,
-        "imagen": "./src/assets/g72.jpg",
+        "imagen": "/assets/g72.jpg",
         "stock": 15
     },
     {
@@ -104,7 +104,7 @@
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 860,
-        "imagen": "./src/assets/g82.jpg",
+        "imagen": "/assets/g82.jpg",
         "stock": 10
     },
     {
@@ -113,7 +113,7 @@
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 990,
-        "imagen": "./src/assets/edge30.jpg",
+        "imagen": "/assets/edge30.jpg",
         "stock": 2
     },
     {
@@ -122,7 +122,7 @@
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 540,
-        "imagen": "./src/assets/g42.jpg",
+        "imagen": "/assets/g42.jpg",
         "stock": 9
     },
     {
@@ -137,7 +137,7 @@
             "Experimente Wi Fi 6 de próxima generación con velocidades hasta 3 veces más rápidas que el Wi Fi normal, lo que facilita la conexión y el trabajo completo en un instante."
         ],
         "precio": 1350,
-        "imagen": "./src/assets/nb-samsung-i5.jpg",
+        "imagen": "/assets/nb-samsung-i5.jpg",
         "stock": 33
     },
     {
@@ -146,7 +146,7 @@
         "categoria": "Notebooks",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 1950,
-        "imagen": "./src/assets/nb-samsung-light.jpg",
+        "imagen": "/assets/nb-samsung-light.jpg",
         "stock": 4
     },
     {
@@ -155,7 +155,7 @@
         "categoria": "Tablets",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 850,
-        "imagen": "./src/assets/a7lite.jpg",
+        "imagen": "/assets/a7lite.jpg",
         "stock": 5
     },
     {
@@ -164,7 +164,7 @@
         "categoria": "Tablets",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 990,
-        "imagen": "./src/assets/a8.jpg",
+        "imagen": "/assets/a8.jpg",
         "stock": 20
     },
     {
@@ -173,7 +173,7 @@
         "categoria": "Auriculares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 290,
-        "imagen": "./src/assets/earbuds2.jpg",
+        "imagen": "/assets/earbuds2.jpg",
         "stock": 7
     },
     {
@@ -182,7 +182,7 @@
         "categoria": "Auriculares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 440,
-        "imagen": "./src/assets/budslive.jpg",
+        "imagen": "/assets/budslive.jpg",
         "stock": 6
     }
 ]

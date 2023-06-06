@@ -17,7 +17,7 @@ export default function App() {
                     <Route path='/' element={<HomePage />} />
                     <Route path='/ItemList' element={<ItemListPage />} />
                     <Route path='/Item/:id' element={<ItemPage />} />
-                    <Route path='/Category/:categoryId' element={<CategoryPage />} />
+                    <Route path='/Category/:category' element={<CategoryPage />} />
                     <Route path="*" element={<ErrorPage />} />
                     <Route />
                 </Routes>

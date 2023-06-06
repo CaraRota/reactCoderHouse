@@ -21,7 +21,7 @@ const ItemListContainer = ({ greeting }) => {
         fetchData()
     }, [])
 
-    const filtrarCategoria = Data.filter((producto) => producto.category === category)
+    const filtrarCategoria = Data.filter((producto) => producto.categoria === category)
 
     return (
         <>

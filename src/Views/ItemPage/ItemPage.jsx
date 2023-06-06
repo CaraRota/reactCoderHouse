@@ -1,9 +1,11 @@
 import React from 'react'
-import Item from "../../components/itemlistcontainer/Item"
+import ItemDetail from '../../components/itemdetailcontainer/ItemDetail'
 
 function ItemPage() {
     return (
-        <Item />
+        <>
+            <ItemDetail />
+        </>
     )
 }
 

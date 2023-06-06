@@ -1,40 +1,32 @@
-import React, { useEffect, useState } from 'react'
 import { CardActionArea, Typography, CardMedia, CardContent, Card } from '@mui/material';
-import { useParams } from 'react-router-dom';
-import axios from 'axios';
+import AmountBtnBar from "../buttons/AmountBtnBar"
 
-function Item() {
-    let { id } = useParams()
-    const [item, setItem] = useState({})
-
-    useEffect(() => {
-        axios("../../../datos.json").then((res) =>
-            setItem(res.data[id--])
-        )
-    }, [id])
+function Item({ product }) {
+    const currency = "USD"
     return (
         <>
-            <Card sx={{ maxWidth: 345 }}>
+            <Card sx={{ maxWidth: 200, maxHeight: 200 }}>
                 <CardActionArea>
                     <CardMedia
                         component="img"
                         height="200"
-                        // image={item.imagen}
-                        alt={item.descripcion}
+                        image={product.imagen}
+                        alt={product.descripcion}
                     />
                     <CardContent>
                         <Typography gutterBottom variant="h5" component="div">
-                            {item.nombre}
+                            {product.nombre}
                         </Typography>
                         <Typography variant="body2" color="text.secondary">
-                            {item.descripcion}
+                            {product.descripcion}
                         </Typography>
-                        <Typography>    
-                            {item.precio}
+                        <Typography>
+                            {product.precio} {currency}
                         </Typography>
                     </CardContent>
                 </CardActionArea>
             </Card>
+            <AmountBtnBar />
         </>
     )
 }

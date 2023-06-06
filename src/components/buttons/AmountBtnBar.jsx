@@ -14,9 +14,9 @@ function AmountBtnBar() {
 
     return (
         <ButtonGroup variant="contained" aria-label="primary button group" fullWidth>
-            <Button onClick={quitarItem}>-</Button>
-            <Button variant="outlined" className='amount-btn'>{amount}</Button>
-            <Button onClick={agregarItem}>+</Button>
+            <Button className='buttons-items' onClick={quitarItem}>-</Button>
+            <Button className='buttons-items'variant="outlined" >{amount}</Button>
+            <Button className='buttons-items' onClick={agregarItem}>+</Button>
         </ButtonGroup>
     )
 }

@@ -1,22 +1,34 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import ItemList from './ItemList';
-import { useState, useEffect } from 'react';
 
 const ItemListContainer = ({ greeting }) => {
-    const [products, setProducts] = useState([])
+    const [productos, setProductos] = useState([])
+
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         try {
+    //             const response = axios.get("../../datos.json")
+    //             setProductos(response.data)
+    //         }
+    //         catch (error) {
+    //             console.log("Error", error)
+    //         }
+    //         fetchData()
+    //     }
+    // }, [])
 
     useEffect(() => {
         axios
             .get("../../datos.json")
-            .then((res) => setProducts(res.data))
+            .then((res) => setProductos(res.data))
             .catch((err) => console.log(err));
-        console.log()
     }, [])
 
     return (
-        <>{greeting}
-            <ItemList products={products} />
+        <>
+            {greeting}
+            <ItemList productos={productos} />
         </>
     )
 }

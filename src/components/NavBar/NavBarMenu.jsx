@@ -3,8 +3,9 @@ import { Menu, MenuItem, Typography, IconButton, Box } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import AdbIcon from '@mui/icons-material/Adb';
 import { useState } from "react"
+import { Link } from 'react-router-dom';
 
-function NavBarMenu({ categorias, nombreTienda }) {
+function NavBarMenu({ categoria, nombreTienda }) {
     const [anchorElNav, setAnchorElNav] = useState(null);
 
     const handleOpenNavMenu = (event) => {
@@ -45,11 +46,11 @@ function NavBarMenu({ categorias, nombreTienda }) {
                         display: { xs: 'block', md: 'none' },
                     }}
                 >
-                    {categorias.map((page) => (
-                        <MenuItem key={page} onClick={handleCloseNavMenu}>
-                            <Typography textAlign="center">{page}</Typography>
+                    
+                        <MenuItem key={categoria} onClick={handleCloseNavMenu}>
+                            <Typography textAlign="center">{categoria}</Typography>
                         </MenuItem>
-                    ))}
+                    
                 </Menu>
             </Box>
             <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
@@ -73,15 +74,17 @@ function NavBarMenu({ categorias, nombreTienda }) {
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                 <ul className='menuLista'>
-                    {categorias.map((page) => (
-                        <li className='menuBtn'
-                            key={page}
-                            onClick={handleCloseNavMenu}
-                            sx={{ my: 2, color: 'white', display: 'block' }}
-                        >
-                            {page}
-                        </li>
-                    ))}
+                    
+                        <div key={categoria}>
+                            <Link to={`/Category/${categoria}`} >
+                                <li className='menuBtn'
+                                    onClick={handleCloseNavMenu}
+                                    sx={{ my: 2, color: 'white', display: 'block' }}
+                                >
+                                    {categoria}
+                                </li>
+                            </Link>
+                        </div>
                 </ul>
             </Box>
         </>

@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "nombre": "Celular Samsung A03s",
+        "nombre": "Samsung A03s",
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 75,
@@ -9,7 +9,7 @@
     },
     {
         "id": 2,
-        "nombre": "Celular Samsung A04",
+        "nombre": "Samsung A04",
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 120,
@@ -17,146 +17,152 @@
     },
     {
         "id": 3,
-        "nombre": "Celular Samsung A04s",
+        "nombre": "Samsung A04s",
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 95,
-        "imagen": "./src/assets/a04s.jfif"
+        "imagen": "./src/assets/04s.jpg"
     },
     {
         "id": 4,
-        "nombre": "Celular Samsung A32",
+        "nombre": "Samsung A32",
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 225,
-        "imagen": "none"
+        "imagen": "./src/assets/a32.jpg"
     },
     {
         "id": 5,
-        "nombre": "Celular Samsung A50s",
+        "nombre": "Samsung A52s",
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 345,
-        "imagen": "none"
+        "imagen": "./src/assets/a52s.jpg"
     },
     {
         "id": 6,
-        "nombre": "Celular Samsung A72",
+        "nombre": "Samsung A72",
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 880,
-        "imagen": "none"
+        "imagen": "./src/assets/a72.jpg"
     },
     {
         "id": 7,
-        "nombre": "Celular Motorola E13",
+        "nombre": "Motorola E13",
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 75,
-        "imagen": "none"
+        "imagen": "./src/assets/e13.jpg"
     },
     {
         "id": 8,
-        "nombre": "Celular Motorola E20",
+        "nombre": "Motorola E20",
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 95,
-        "imagen": "none"
+        "imagen": "./src/assets/e20.jpg"
     },
     {
         "id": 9,
-        "nombre": "Celular Motorola E22i",
+        "nombre": "Motorola E22i",
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 125,
-        "imagen": "none"
+        "imagen": "./src/assets/e22i.jpg"
     },
     {
         "id": 10,
-        "nombre": "Celular Motorola G23",
+        "nombre": "Motorola G23",
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 265,
-        "imagen": "none"
+        "imagen": "./src/assets/g23.jpg"
     },
     {
         "id": 11,
-        "nombre": "Celular Motorola G72",
+        "nombre": "Motorola G72",
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 645,
-        "imagen": "none"
+        "imagen": "./src/assets/g72.jpg"
     },
     {
         "id": 12,
-        "nombre": "Celular Motorola G82",
+        "nombre": "Motorola G82",
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 860,
-        "imagen": "none"
+        "imagen": "./src/assets/g82.jpg"
     },
     {
         "id": 13,
-        "nombre": "Celular Motorola Edge 30 Neo",
+        "nombre": "Motorola Edge 30 Neo",
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 990,
-        "imagen": "none"
+        "imagen": "./src/assets/edge30.jpg"
     },
     {
         "id": 14,
-        "nombre": "Celular Motorola G42",
+        "nombre": "Motorola G42",
         "categoria": "Celulares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 540,
-        "imagen": "none"
+        "imagen": "./src/assets/g42.jpg"
     },
     {
         "id": 15,
-        "nombre": "Notebook Samsung RB3505",
+        "nombre": "Samsung Galaxy Book",
         "categoria": "Notebooks",
-        "descripcion": "Lorem ipsun dolor sit amet",
+        "descripcion": [
+            "¿Por qué las computadoras portátiles no pueden parecerse más a los teléfonos? Delgada, liviana y súper poderosa, Samsung Galaxy Book incluye una PC premium en un nuevo diseño diseñado para su presupuesto.",
+            "Transmite tu programa favorito. Multitarea en cualquier momento. Hágalo todo con un tiempo de retraso mínimo, gracias a una tarjeta gráfica dedicada y los últimos procesadores Intel Core i5 de 11 generación.",
+            "Empareje su Galaxy y salte fácilmente de su vida laboral a su vida personal en su Galaxy Book. Configure su tableta Tab S7 Series como una segunda pantalla para obtener el doble de productividad o para ver su contenido favorito en una pantalla mucho más grande.",
+            "Comparta archivos al instante entre dispositivos con Quick Share. O conecte su Galaxy Buds Pro y cambie sin problemas de videoconferencias a ponerse al día con amigos.",
+            "Experimente Wi Fi 6 de próxima generación con velocidades hasta 3 veces más rápidas que el Wi Fi normal, lo que facilita la conexión y el trabajo completo en un instante."
+        ],
         "precio": 1350,
-        "imagen": "none"
+        "imagen": "./src/assets/nb-samsung-i5.jpg"
     },
     {
         "id": 16,
-        "nombre": "Notebook Samsung RB3510",
+        "nombre": "Samsung Flash",
         "categoria": "Notebooks",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 1950,
-        "imagen": "none"
+        "imagen": "./src/assets/nb-samsung-light.jpg"
     },
     {
         "id": 17,
-        "nombre": "Tablet Samsung A7 Lite",
+        "nombre": "Samsung A7 Lite",
         "categoria": "Tablets",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 850,
-        "imagen": "none"
+        "imagen": "./src/assets/a7lite.jpg"
     },
     {
         "id": 18,
-        "nombre": "Tablet Samsung A8 Pro",
+        "nombre": "Samsung A8",
         "categoria": "Tablets",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 990,
-        "imagen": "none"
+        "imagen": "./src/assets/a8.jpg"
     },
     {
         "id": 19,
-        "nombre": "Auriculares Samsung Earbuds 2",
+        "nombre": "Samsung Earbuds 2",
         "categoria": "Auriculares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 290,
-        "imagen": "none"
+        "imagen": "./src/assets/earbuds2.jpg"
     },
     {
         "id": 20,
-        "nombre": "Auriculares Samsung Earbuds 3",
+        "nombre": "Samsung Buds Live",
         "categoria": "Auriculares",
         "descripcion": "Lorem ipsun dolor sit amet",
         "precio": 440,
-        "imagen": "none"
+        "imagen": "./src/assets/budslive.jpg"
     }
 ]

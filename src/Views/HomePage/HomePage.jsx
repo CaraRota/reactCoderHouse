@@ -5,7 +5,6 @@ function HomePage() {
     return (
         <main>
             <h2 className='titulo'><ItemListContainer greeting="Bienvenido a la tienda de CaraRota" /></h2>
-            <ItemListContainer />
         </main>
     )
 }

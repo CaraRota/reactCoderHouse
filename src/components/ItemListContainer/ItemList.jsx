@@ -5,13 +5,22 @@ import Item from './Item';
 function ItemList({ productos }) {
     return (
         <>
-            <ul>
-                {productos.map((product) => (
-                    <div className='cards' key={product.id}>
-                        <Item product={product} />
-                    </div>
+            <section>
+                {productos?.map((product) => (
+                    <ul className='cards' key={product.id}>
+                        <Item
+                            id={product.id}
+                            nombre={product.nombre}
+                            descripcion={product.descripcion}
+                            precio={product.precio}
+                            stock={product.stock}
+                            categoria={product.categoria}
+                            imagen={product.imagen}
+                            currency={"USD"}
+                        />
+                    </ul>
                 ))}
-            </ul>
+            </section>
         </>
     )
 }

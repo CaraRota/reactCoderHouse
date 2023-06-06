@@ -4,7 +4,7 @@ import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom'
 
 function ItemDetailContainer() {
-    const [producto, setProducto] = useState({})
+    const [product, setProduct] = useState({})
     const { id } = useParams()
 
     useEffect(() => {
@@ -12,7 +12,7 @@ function ItemDetailContainer() {
             try {
                 const response = await axios.get("../../datos.json")
                 const item = response.data.find((producto) => producto.id === parseInt(id))
-                setProducto(item)
+                setProduct(item)
             }
             catch (error) {
                 console.log("Error", error)
@@ -23,7 +23,18 @@ function ItemDetailContainer() {
 
     return (
         <>
-            <ItemDetail producto={producto} />
+            <div key={id} className='container-producto'>
+                <ItemDetail
+                    id={product.id}
+                    nombre={product.nombre}
+                    descripcion={product.descripcion}
+                    precio={product.precio}
+                    stock={product.stock}
+                    categoria={product.categoria}
+                    imagen={product.imagen}
+                    currency={"USD"}
+                />
+            </div>
         </>
     );
 }

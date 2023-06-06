@@ -1,6 +1,3 @@
-.container-producto {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 600px;
+.itemCount {
+  max-width: 300px;
 }/*# sourceMappingURL=ItemDetail.css.map */

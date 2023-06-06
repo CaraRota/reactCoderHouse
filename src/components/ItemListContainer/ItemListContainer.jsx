@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import ItemList from './ItemList';
+import { useParams } from 'react-router-dom';
 
 const ItemListContainer = ({ greeting }) => {
     const [productos, setProductos] = useState([])
+    let { category } = useParams()
 
     useEffect(() => {
         const fetchData = async () => {
@@ -18,10 +20,12 @@ const ItemListContainer = ({ greeting }) => {
         fetchData()
     }, [])
 
+    const filtrarCategoria = productos.filter((producto) => producto.category === category)
+
     return (
         <>
             {greeting}
-            <ItemList productos={productos} />
+            {category ? <ItemList productos={filtrarCategoria} /> : <ItemList productos={productos} />}
         </>
     )
 }

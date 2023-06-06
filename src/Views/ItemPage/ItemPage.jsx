@@ -1,10 +1,10 @@
 import React from 'react'
-import ItemDetail from '../../components/itemdetailcontainer/ItemDetail'
+import ItemDetailContainer from '../../components/itemdetailcontainer/ItemDetailContainer'
 
 function ItemPage() {
     return (
         <>
-            <ItemDetail />
+            <ItemDetailContainer />
         </>
     )
 }

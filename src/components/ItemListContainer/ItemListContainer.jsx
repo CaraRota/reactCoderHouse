@@ -5,24 +5,17 @@ import ItemList from './ItemList';
 const ItemListContainer = ({ greeting }) => {
     const [productos, setProductos] = useState([])
 
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         try {
-    //             const response = axios.get("../../datos.json")
-    //             setProductos(response.data)
-    //         }
-    //         catch (error) {
-    //             console.log("Error", error)
-    //         }
-    //         fetchData()
-    //     }
-    // }, [])
-
     useEffect(() => {
-        axios
-            .get("../../datos.json")
-            .then((res) => setProductos(res.data))
-            .catch((err) => console.log(err));
+        const fetchData = async () => {
+            try {
+                const response = await axios.get("../../datos.json")
+                setProductos(response.data)
+            }
+            catch (error) {
+                console.log("Error", error)
+            }
+        }
+        fetchData()
     }, [])
 
     return (

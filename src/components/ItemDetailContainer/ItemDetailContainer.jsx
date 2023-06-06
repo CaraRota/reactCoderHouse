@@ -4,25 +4,26 @@ import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom'
 
 function ItemDetailContainer() {
-    const [productos, setProductos] = useState([])
+    const [producto, setProducto] = useState({})
     const { id } = useParams()
 
     useEffect(() => {
         const fetchData = async () => {
             try {
                 const response = await axios.get("../../datos.json")
-                setProductos(response.data)
+                const item = response.data.find((producto) => producto.id === parseInt(id))
+                setProducto(item)
             }
             catch (error) {
                 console.log("Error", error)
             }
-            fetchData()
         }
-    }, [])
+        fetchData()
+    }, [id])
 
     return (
         <>
-            <ItemDetail producto={productos.find(producto => producto.id === id)} />
+            <ItemDetail producto={producto} />
         </>
     );
 }

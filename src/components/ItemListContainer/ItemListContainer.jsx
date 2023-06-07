@@ -1,14 +1,17 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Data from "../../../datos.json"
+import Loader from "../Loader/Loader"
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
 
 const ItemListContainer = ({ greeting }) => {
     const [productos, setProductos] = useState([])
+    const [loading, setLoading] = useState(false)
     let { category } = useParams()
 
     useEffect(() => {
+        setLoading(true)
         const fetchData = async () => {
             try {
                 const response = await axios.get("../../datos.json")
@@ -16,6 +19,8 @@ const ItemListContainer = ({ greeting }) => {
             }
             catch (error) {
                 console.log("Error", error)
+            } finally {
+                setLoading(false)
             }
         }
         fetchData()
@@ -26,7 +31,7 @@ const ItemListContainer = ({ greeting }) => {
     return (
         <>
             {greeting}
-            {category ? <ItemList productos={filtrarCategoria} categoria={<h2 className='category-title'>Categoria: {category}</h2>} /> : <ItemList productos={productos} />}
+            {loading ? <Loader /> : category ? <ItemList productos={filtrarCategoria} categoria={<h2 className='category-title'>Categoria: {category}</h2 >} /> : <ItemList productos={productos} />}
         </>
     )
 }

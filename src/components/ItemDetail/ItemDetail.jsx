@@ -5,6 +5,7 @@ import { Card, CardContent, CardMedia, Typography } from '@mui/material';
 import { CardActionArea } from '@mui/material';
 
 const ItemDetail = ({ id, nombre, descripcion, precio, stock, categoria, imagen, currency }) => {
+
     const onAdd = (cantidad) => {
         console.log(`Compraste ${cantidad} item(s)`);
     };

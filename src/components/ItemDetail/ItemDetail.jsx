@@ -1,6 +1,6 @@
 import React from 'react'
 import "../../css/ItemDetail.css"
-import ItemCount from "./ItemCount"
+import ItemCount from "../ItemCount/ItemCount"
 import { Card, CardContent, CardMedia, Typography } from '@mui/material';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import { Link } from 'react-router-dom';

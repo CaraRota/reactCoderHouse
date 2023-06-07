@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import ItemDetail from './ItemDetail';
+import ItemDetail from '../ItemDetail/ItemDetail';
 import { useParams } from 'react-router-dom'
 
 const ItemDetailContainer = () => {

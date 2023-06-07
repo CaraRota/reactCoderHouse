@@ -5,7 +5,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { useState } from "react"
 import { Link } from 'react-router-dom';
 
-const NavBarMenu = ({ nombreTienda }) => {
+const NavbarMenu = ({ nombreTienda }) => {
     const [anchorElNav, setAnchorElNav] = useState(null);
 
     const handleOpenNavMenu = (event) => {
@@ -148,4 +148,4 @@ const NavBarMenu = ({ nombreTienda }) => {
     )
 }
 
-export default NavBarMenu
+export default NavbarMenu

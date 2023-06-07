@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import Data from "../../../datos.json"
-import ItemList from './ItemList';
+import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
 
 const ItemListContainer = ({ greeting }) => {

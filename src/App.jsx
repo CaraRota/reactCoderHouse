@@ -1,10 +1,10 @@
 import './css/App.css'
 import React from 'react'
-import NavBar from './components/navbar/NavBar'
+import NavBar from './components/Navbar2/Navbar'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import HomePage from './Views/HomePage/HomePage'
 import ItemPage from './Views/ItemPage/ItemPage'
-import ErrorPage from './Views/ErrorPage/ErrorPage'
+import ErrorPage from './components/Error/ErrorPage'
 import CategoryPage from './Views/CategoryPage/CategoryPage'
 
 const App = () => {

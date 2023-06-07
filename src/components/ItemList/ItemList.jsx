@@ -1,6 +1,6 @@
 import * as React from 'react';
 import "../../css/ItemList.css"
-import Item from './Item';
+import Item from '../Item/Item';
 
 const ItemList = ({ productos, categoria }) => {
     return (

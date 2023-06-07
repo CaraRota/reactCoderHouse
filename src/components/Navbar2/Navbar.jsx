@@ -1,12 +1,12 @@
 import * as React from 'react';
 import { AppBar, Box, Toolbar, Typography, Container } from '@mui/material';
 import AdbIcon from '@mui/icons-material/Adb';
-import CartWidget from "./CartWidget"
-import NavBarMenu from './NavBarMenu';
+import CartWidget from "../CartWidget/CartWidget"
+import NavBarMenu from './NavbarMenu';
 import "../../css/NavBar.css"
 import { Link } from 'react-router-dom';
 
-const NavBar = () => {
+const Navbar = () => {
     const nombreTienda = "Samsung";
 
     return (
@@ -42,4 +42,4 @@ const NavBar = () => {
         </nav >
     );
 }
-export default NavBar;
+export default Navbar;

@@ -1,5 +1,5 @@
 import React from 'react'
-import ItemDetailContainer from '../../components/itemdetailcontainer/ItemDetailContainer'
+import ItemDetailContainer from '../../components/ItemDetailContainer2/ItemDetailContainer'
 
 const ItemPage = () => {
     return (

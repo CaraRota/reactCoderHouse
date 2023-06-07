@@ -7,7 +7,7 @@ import ItemPage from './Views/ItemPage/ItemPage'
 import ErrorPage from './Views/ErrorPage/ErrorPage'
 import CategoryPage from './Views/CategoryPage/CategoryPage'
 
-export default function App() {
+const App = () => {
     return (
         <>
             <Router>
@@ -23,3 +23,4 @@ export default function App() {
         </>
     )
 }
+export default App

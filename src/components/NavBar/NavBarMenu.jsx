@@ -5,7 +5,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import { useState } from "react"
 import { Link } from 'react-router-dom';
 
-function NavBarMenu({ nombreTienda }) {
+const NavBarMenu = ({ nombreTienda }) => {
     const [anchorElNav, setAnchorElNav] = useState(null);
 
     const handleOpenNavMenu = (event) => {
@@ -47,7 +47,7 @@ function NavBarMenu({ nombreTienda }) {
                     }}
                 >
                     <MenuItem onClick={handleCloseNavMenu}>
-                        <Link to={`/Category/${"Celulares"}`} >
+                        <Link className='link-category' to={`/Category/${"Celulares"}`} >
                             <li className='menuBtn'
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
@@ -55,7 +55,7 @@ function NavBarMenu({ nombreTienda }) {
                                 Celulares
                             </li>
                         </Link>
-                        <Link to={`/Category/${"Tablets"}`} >
+                        <Link className='link-category' to={`/Category/${"Tablets"}`} >
                             <li className='menuBtn'
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
@@ -63,7 +63,7 @@ function NavBarMenu({ nombreTienda }) {
                                 Tablets
                             </li>
                         </Link>
-                        <Link to={`/Category/${"Notebooks"}`} >
+                        <Link className='link-category' to={`/Category/${"Notebooks"}`} >
                             <li className='menuBtn'
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
@@ -71,7 +71,7 @@ function NavBarMenu({ nombreTienda }) {
                                 Notebooks
                             </li>
                         </Link>
-                        <Link to={`/Category/${"Auriculares"}`} >
+                        <Link className='link-category' to={`/Category/${"Auriculares"}`} >
                             <li className='menuBtn'
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
@@ -104,7 +104,7 @@ function NavBarMenu({ nombreTienda }) {
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                 <ul className='menuLista'>
-                    <Link to={`/Category/${"Celulares"}`} >
+                    <Link className='link-category' to={`/Category/${"Celulares"}`} >
                         <li className='menuBtn'
                             onClick={handleCloseNavMenu}
                             sx={{ my: 2, color: 'white', display: 'block' }}
@@ -112,7 +112,7 @@ function NavBarMenu({ nombreTienda }) {
                             Celulares
                         </li>
                     </Link>
-                    <Link to={`/Category/${"Tablets"}`} >
+                    <Link className='link-category' to={`/Category/${"Tablets"}`} >
                         <li className='menuBtn'
                             onClick={handleCloseNavMenu}
                             sx={{ my: 2, color: 'white', display: 'block' }}
@@ -120,7 +120,7 @@ function NavBarMenu({ nombreTienda }) {
                             Tablets
                         </li>
                     </Link>
-                    <Link to={`/Category/${"Notebooks"}`} >
+                    <Link className='link-category' to={`/Category/${"Notebooks"}`} >
                         <li className='menuBtn'
                             onClick={handleCloseNavMenu}
                             sx={{ my: 2, color: 'white', display: 'block' }}
@@ -128,7 +128,7 @@ function NavBarMenu({ nombreTienda }) {
                             Notebooks
                         </li>
                     </Link>
-                    <Link to={`/Category/${"Auriculares"}`} >
+                    <Link className='link-category' to={`/Category/${"Auriculares"}`} >
                         <li className='menuBtn'
                             onClick={handleCloseNavMenu}
                             sx={{ my: 2, color: 'white', display: 'block' }}

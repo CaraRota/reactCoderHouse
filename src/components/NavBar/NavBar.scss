@@ -1,5 +1,5 @@
 .menuLista {
-    list-style: none !important ;
+    list-style: none;
     display: flex;
 }
 
@@ -37,6 +37,7 @@
         color: #000;
     }
 }
+
 .cart-number {
     display: flex;
     align-items: center;
@@ -48,4 +49,7 @@
     display: flex;
     justify-content: start;
     align-items: center;
+}
+.link-category{
+    text-decoration: none;
 }

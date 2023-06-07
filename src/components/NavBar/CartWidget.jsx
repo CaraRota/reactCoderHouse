@@ -2,7 +2,7 @@ import React from 'react';
 import { IconButton, Badge } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
-function CartWidget({ cantidades }) {
+const CartWidget = ({ cantidades }) => {
     return (
         <>
             <IconButton aria-label="cart">

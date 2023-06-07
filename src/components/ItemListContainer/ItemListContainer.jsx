@@ -26,7 +26,7 @@ const ItemListContainer = ({ greeting }) => {
     return (
         <>
             {greeting}
-            {category ? <ItemList productos={filtrarCategoria} /> : <ItemList productos={productos} />}
+            {category ? <ItemList productos={filtrarCategoria} categoria={<h2 className='category-title'>Categoria: {category}</h2>} /> : <ItemList productos={productos} />}
         </>
     )
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { ButtonGroup, Button } from '@mui/material'
 
-function ItemCount() {
+const ItemCount = () => {
     const [amount, setAmount] = useState(0)
 
     const agregarItem = () => {
@@ -14,7 +14,7 @@ function ItemCount() {
     return (
         <ButtonGroup variant="contained" aria-label="primary button group" fullWidth>
             <Button className='buttons-items' onClick={quitarItem}>-</Button>
-            <Button className='buttons-items'variant="outlined" >{amount}</Button>
+            <Button className='buttons-items' variant="outlined" >{amount}</Button>
             <Button className='buttons-items' onClick={agregarItem}>+</Button>
         </ButtonGroup>
     )

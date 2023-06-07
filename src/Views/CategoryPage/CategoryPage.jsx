@@ -1,7 +1,7 @@
 import React from 'react'
 import ItemListContainer from '../../components/itemlistcontainer/ItemListContainer'
 
-function CategoryPage() {
+const CategoryPage = () => {
     return (
         <>
             <ItemListContainer />

@@ -2,9 +2,10 @@ import * as React from 'react';
 import "../../css/ItemList.css"
 import Item from './Item';
 
-function ItemList({ productos }) {
+const ItemList = ({ productos, categoria }) => {
     return (
         <>
+            {categoria}
             <section>
                 {productos?.map((product) => (
                     <ul className='cards' key={product.id}>

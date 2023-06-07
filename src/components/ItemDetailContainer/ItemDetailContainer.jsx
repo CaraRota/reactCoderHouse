@@ -3,7 +3,7 @@ import axios from 'axios';
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom'
 
-function ItemDetailContainer() {
+const ItemDetailContainer = () => {
     const [product, setProduct] = useState({})
     const { id } = useParams()
 

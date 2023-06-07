@@ -1,5 +1,5 @@
 .menuLista {
-  list-style: none !important;
+  list-style: none;
   display: flex;
 }
 
@@ -45,4 +45,8 @@
   display: flex;
   justify-content: start;
   align-items: center;
+}
+
+.link-category {
+  text-decoration: none;
 }/*# sourceMappingURL=NavBar.css.map */

@@ -2,7 +2,7 @@ import { Button, CardActionArea, Typography, CardMedia, CardContent, Card } from
 import { Link } from 'react-router-dom';
 import "../../css/Item.css"
 
-function Item({ id, nombre, descripcion, precio, stock, categoria, imagen, currency }) {
+const Item = ({ id, nombre, descripcion, precio, stock, categoria, imagen, currency }) => {
     return (
         <>
             <div>
@@ -24,8 +24,8 @@ function Item({ id, nombre, descripcion, precio, stock, categoria, imagen, curre
                             </Typography>
                         </CardContent>
                     </CardActionArea>
-                    <Link className='text-cards' to={`/Item/${id}`} >
-                        <Button variant="outlined">Ver Detalle</Button>
+                    <Link to={`/Item/${id}`} >
+                        <Button sx={{ mb: 2 }} variant="outlined">Ver Detalle</Button>
                     </Link>
                 </Card>
             </div>

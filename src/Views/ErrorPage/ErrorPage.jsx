@@ -2,7 +2,7 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function ErrorPage() {
+const ErrorPage = () => {
     const [countdown, setCountdown] = useState(5)
     const navigate = useNavigate();
 

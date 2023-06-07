@@ -5,7 +5,7 @@ import { Card, CardContent, CardMedia, Typography } from '@mui/material';
 import { Button, CardActionArea, CardActions } from '@mui/material';
 import { Link } from 'react-router-dom';
 
-function ItemDetail({ id, nombre, descripcion, precio, stock, categoria, imagen, currency }) {
+const ItemDetail = ({ id, nombre, descripcion, precio, stock, categoria, imagen, currency }) => {
     return (
         <>
             <div className='card-container'>
@@ -28,10 +28,10 @@ function ItemDetail({ id, nombre, descripcion, precio, stock, categoria, imagen,
                             </Typography>
                         </CardContent>
                     </CardActionArea>
+                    <div className='itemCount'>
+                        <ItemCount />
+                    </div>
                 </Card>
-                <div className='itemCount'>
-                    <ItemCount />
-                </div>
                 <CardActions sx={{ justifyContent: "center" }}>
                     {/* Cart aun no esta desarrollado */}
                     <Link to={`/Cart}`} >

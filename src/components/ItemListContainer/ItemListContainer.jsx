@@ -14,10 +14,13 @@ const ItemListContainer = ({ greeting }) => {
         setLoading(true)
         const fetchData = async () => {
             try {
-                const response = await axios.get("../../datos.json")
+                const response = await new Promise(resolve =>
+                    setTimeout(() => {
+                        resolve(axios.get("../../datos.json"))
+                    }, 1000)
+                )
                 setProductos(response.data)
-            }
-            catch (error) {
+            } catch (error) {
                 console.log("Error", error)
             } finally {
                 setLoading(false)

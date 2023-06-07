@@ -32,7 +32,7 @@ const ItemDetail = ({ id, nombre, descripcion, precio, stock, categoria, imagen,
                         </CardContent>
                     </CardActionArea>
                     <div className='itemCount'>
-                        <ItemCount stock={stock} onAdd={onAdd} />
+                        <ItemCount stock={stock} onAdd={onAdd} initial={1} />
                     </div>
                 </Card>
             </div>

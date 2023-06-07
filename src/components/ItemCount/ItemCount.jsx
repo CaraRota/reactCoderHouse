@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import { ButtonGroup, Button, CardActions } from '@mui/material'
 
-const ItemCount = ({ stock, onAdd }) => {
-    const [amount, setAmount] = useState(1)
+const ItemCount = ({ stock, initial, onAdd }) => {
+    const [amount, setAmount] = useState(initial)
 
     const agregarItem = () => {
         amount < stock ? setAmount(amount + 1) : null

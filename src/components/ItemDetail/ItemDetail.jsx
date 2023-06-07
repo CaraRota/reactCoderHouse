@@ -2,10 +2,12 @@ import React from 'react'
 import "../../css/ItemDetail.css"
 import ItemCount from "../ItemCount/ItemCount"
 import { Card, CardContent, CardMedia, Typography } from '@mui/material';
-import { Button, CardActionArea, CardActions } from '@mui/material';
-import { Link } from 'react-router-dom';
+import { CardActionArea } from '@mui/material';
 
 const ItemDetail = ({ id, nombre, descripcion, precio, stock, categoria, imagen, currency }) => {
+    const onAdd = (cantidad) => {
+        console.log(`Compraste ${cantidad} item(s)`);
+    };
     return (
         <>
             <div className='card-container'>
@@ -21,7 +23,7 @@ const ItemDetail = ({ id, nombre, descripcion, precio, stock, categoria, imagen,
                                 {nombre}
                                 <div>{precio} {currency}</div>
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
+                            <Typography variant="body2" component="div" color="text.secondary">
                                 {descripcion}
                                 <div>Categoria: {categoria}</div>
                                 <div>Stock: {stock}</div>
@@ -29,15 +31,9 @@ const ItemDetail = ({ id, nombre, descripcion, precio, stock, categoria, imagen,
                         </CardContent>
                     </CardActionArea>
                     <div className='itemCount'>
-                        <ItemCount />
+                        <ItemCount stock={stock} onAdd={onAdd} />
                     </div>
                 </Card>
-                <CardActions sx={{ justifyContent: "center" }}>
-                    {/* Cart aun no esta desarrollado */}
-                    <Link to={`/Cart}`} >
-                        <Button variant="outlined">Agregar al Carrito</Button>
-                    </Link>
-                </CardActions>
             </div>
         </>
     )

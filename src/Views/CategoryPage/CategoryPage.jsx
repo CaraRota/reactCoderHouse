@@ -1,5 +1,5 @@
 import React from 'react'
-import ItemListContainer from '../../components/ItemListContainer2/ItemListContainer'
+import ItemListContainer from '../../components/ItemListContainer/ItemListContainer'
 
 const CategoryPage = () => {
     return (

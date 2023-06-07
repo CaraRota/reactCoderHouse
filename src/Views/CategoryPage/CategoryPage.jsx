@@ -4,7 +4,6 @@ import ItemListContainer from '../../components/itemlistcontainer/ItemListContai
 function CategoryPage() {
     return (
         <>
-            <div>Categoria:</div>
             <ItemListContainer />
         </>
     )

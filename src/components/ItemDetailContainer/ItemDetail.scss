@@ -1,5 +1,10 @@
 .container-producto {
+    display: flex;
+    justify-content: center;
 }
 .itemCount{
-    max-width: 300px;
+    justify-content: center;
+}
+.card-container{
+    margin-top: 20px;
 }

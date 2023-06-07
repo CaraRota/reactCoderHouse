@@ -3,6 +3,13 @@
     display: flex;
 }
 
+.menuListaMobile {
+    background-color: #1976d2;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+}
+
 .menuBtn {
     --b: 1px;
     /* border thickness */
@@ -50,6 +57,14 @@
     justify-content: start;
     align-items: center;
 }
-.link-category{
+
+.link-category {
     text-decoration: none;
+}
+
+.nombreTiendaMobile {
+    color: inherit;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
 }

@@ -46,62 +46,68 @@ const NavBarMenu = ({ nombreTienda }) => {
                         display: { xs: 'block', md: 'none' },
                     }}
                 >
-                    <MenuItem onClick={handleCloseNavMenu}>
-                        <Link className='link-category' to={`/Category/${"Celulares"}`} >
-                            <li className='menuBtn'
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
-                            >
-                                Celulares
-                            </li>
-                        </Link>
-                        <Link className='link-category' to={`/Category/${"Tablets"}`} >
-                            <li className='menuBtn'
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
-                            >
-                                Tablets
-                            </li>
-                        </Link>
-                        <Link className='link-category' to={`/Category/${"Notebooks"}`} >
-                            <li className='menuBtn'
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
-                            >
-                                Notebooks
-                            </li>
-                        </Link>
-                        <Link className='link-category' to={`/Category/${"Auriculares"}`} >
-                            <li className='menuBtn'
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'white', display: 'block' }}
-                            >
-                                Auriculares
-                            </li>
-                        </Link>
+                    <MenuItem sx={{ display: "flex", justifyContent: "center" }} onClick={handleCloseNavMenu}>
+                        <ul className='menuListaMobile'>
+                            <Link className='link-category' to={`/Category/${"Celulares"}`} >
+                                <li className='menuBtn'
+                                    onClick={handleCloseNavMenu}
+                                    sx={{ my: 2, color: 'white', display: 'block' }}
+                                >
+                                    Celulares
+                                </li>
+                            </Link>
+                            <Link className='link-category' to={`/Category/${"Tablets"}`} >
+                                <li className='menuBtn'
+                                    onClick={handleCloseNavMenu}
+                                    sx={{ my: 2, color: 'white', display: 'block' }}
+                                >
+                                    Tablets
+                                </li>
+                            </Link>
+                            <Link className='link-category' to={`/Category/${"Notebooks"}`} >
+                                <li className='menuBtn'
+                                    onClick={handleCloseNavMenu}
+                                    sx={{ my: 2, color: 'white', display: 'block' }}
+                                >
+                                    Notebooks
+                                </li>
+                            </Link>
+                            <Link className='link-category' to={`/Category/${"Auriculares"}`} >
+                                <li className='menuBtn'
+                                    onClick={handleCloseNavMenu}
+                                    sx={{ my: 2, color: 'white', display: 'block' }}
+                                >
+                                    Auriculares
+                                </li>
+                            </Link>
+                        </ul>
                     </MenuItem>
-
                 </Menu>
             </Box>
-            <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-            <Typography
-                variant="h5"
-                noWrap
-                component="a"
-                href=""
-                sx={{
-                    mr: 2,
-                    display: { xs: 'flex', md: 'none' },
-                    flexGrow: 1,
-                    fontFamily: 'monospace',
-                    fontWeight: 700,
-                    letterSpacing: '.3rem',
-                    color: 'inherit',
-                    textDecoration: 'none',
-                }}
-            >
-                {nombreTienda}
-            </Typography>
+            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                <Link className='nombreTiendaMobile' to={"/"}>
+                    <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
+                    <Typography
+                        variant="h5"
+                        noWrap
+                        component="a"
+                        href=""
+                        sx={{
+                            mr: 2,
+                            display: { xs: 'flex', md: 'none' },
+                            flexGrow: 1,
+                            fontFamily: 'monospace',
+                            fontWeight: 700,
+                            justifyContent: "center",
+                            letterSpacing: '.3rem',
+                            color: 'inherit',
+                            textDecoration: 'none',
+                        }}
+                    >
+                        {nombreTienda}
+                    </Typography>
+                </Link>
+            </Box>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                 <ul className='menuLista'>
                     <Link className='link-category' to={`/Category/${"Celulares"}`} >

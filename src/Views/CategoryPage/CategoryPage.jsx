@@ -4,7 +4,9 @@ import ItemListContainer from '../../components/ItemListContainer/ItemListContai
 const CategoryPage = () => {
     return (
         <>
-            <ItemListContainer />
+            <main>
+                <div className='titulo'><ItemListContainer /></div>
+            </main>
         </>
     )
 }

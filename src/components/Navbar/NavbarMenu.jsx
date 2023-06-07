@@ -102,8 +102,7 @@ const NavbarMenu = ({ nombreTienda }) => {
                             letterSpacing: '.3rem',
                             color: 'inherit',
                             textDecoration: 'none',
-                        }}
-                    >
+                        }}>
                         {nombreTienda}
                     </Typography>
                 </Link>

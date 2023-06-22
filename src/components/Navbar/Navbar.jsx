@@ -33,9 +33,11 @@ const Navbar = () => {
                             </Typography>
                         </Link>
                         <NavBarMenu nombreTienda={nombreTienda} />
-                        <Box sx={{ flexGrow: 0 }}>
-                            <CartWidget cantidades="0" />
-                        </Box>
+                        <Link to={"/Cart"}>
+                            <Box sx={{ flexGrow: 0 }}>
+                                <CartWidget cantidades="0" />
+                            </Box>
+                        </Link>
                     </Toolbar>
                 </Container>
             </AppBar>

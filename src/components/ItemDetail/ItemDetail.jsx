@@ -1,14 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "../../css/ItemDetail.css"
 import ItemCount from "../ItemCount/ItemCount"
-import { Card, CardContent, CardMedia, Typography } from '@mui/material';
+import { Button, Card, CardContent, CardMedia, Typography } from '@mui/material';
 import { CardActionArea } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 const ItemDetail = ({ id, nombre, descripcion, precio, stock, categoria, imagen, currency }) => {
 
+    const [qtyAdded, setQtyAdded] = useState(0)
+
     const onAdd = (cantidad) => {
-        console.log(`Compraste ${cantidad} item(s)`);
+        setQtyAdded(cantidad)
     };
+
     return (
         <>
             <div className='card-container'>
@@ -27,13 +31,15 @@ const ItemDetail = ({ id, nombre, descripcion, precio, stock, categoria, imagen,
                             <Typography variant="body2" component="div" color="text.secondary">
                                 {descripcion}
                                 <div>Categoria: {categoria}</div>
-                                <div>Stock: {stock}</div>
                             </Typography>
                         </CardContent>
                     </CardActionArea>
                     <div className='itemCount'>
-                        <ItemCount stock={stock} onAdd={onAdd} initial={1} />
+                        {qtyAdded > 0 ? <Link to="/Cart" className='finish-shop'><Button variant='contained'>Terminar Compra</Button></Link>
+                            : <ItemCount stock={stock} onAdd={onAdd} initial={1} />
+                        }
                     </div>
+                    <div style={{ textAlign: "center", marginBottom: "10px" }}>{stock} unidade(s) disponibles</div>
                 </Card>
             </div>
         </>

@@ -40,9 +40,9 @@ const Cart = () => {
                         ))}
                     </TableBody>
                 </Table>
-                <Button onClick={() => removeAll()} variant='contained' color='error' >Eliminar Pedido</Button>
-                <TableCell align="right">Total de su compra: ${total.toLocaleString("es-AR")}</TableCell>
             </TableContainer>
+            <div align="center">Total de su compra: ${total.toLocaleString("es-AR")}</div>
+            <div align="center"><Button onClick={() => removeAll()} variant='contained' color='error' >Eliminar Pedido</Button></div>
         </>
     )
 }

@@ -7,20 +7,23 @@ import ItemPage from './Views/ItemPage/ItemPage'
 import ErrorPage from './components/Error/ErrorPage'
 import CategoryPage from './Views/CategoryPage/CategoryPage'
 import CartPage from './Views/CartPage/CartPage'
+import { CartProvider } from './Context/CartContext'
 
 const App = () => {
     return (
         <>
             <Router>
-                <NavBar />
-                <Routes>
-                    <Route path='/' element={<HomePage />} />
-                    <Route path='/Item/:id' element={<ItemPage />} />
-                    <Route path='/Category/:category' element={<CategoryPage />} />
-                    <Route path='/Cart' element={<CartPage />} />
-                    <Route path="*" element={<ErrorPage />} />
-                    <Route />
-                </Routes>
+                <CartProvider>
+                    <NavBar />
+                    <Routes>
+                        <Route path='/' element={<HomePage />} />
+                        <Route path='/Item/:id' element={<ItemPage />} />
+                        <Route path='/Category/:category' element={<CategoryPage />} />
+                        <Route path='/Cart' element={<CartPage />} />
+                        <Route path="*" element={<ErrorPage />} />
+                        <Route />
+                    </Routes>
+                </CartProvider>
             </Router>
         </>
     )

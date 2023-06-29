@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { IconButton, Badge } from '@mui/material';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { CartContext } from '../../Context/CartContext';
 
-const CartWidget = ({ cantidades }) => {
+
+const CartWidget = () => {
+    const { totalQty } = useContext(CartContext)
+
     return (
         <>
             <IconButton aria-label="cart">
-                <Badge badgeContent={cantidades} color="secondary">
+                <Badge badgeContent={totalQty} color="secondary">
                     <ShoppingCartIcon />
                 </Badge>
             </IconButton>

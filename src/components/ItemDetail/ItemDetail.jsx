@@ -1,16 +1,23 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import "../../css/ItemDetail.css"
 import ItemCount from "../ItemCount/ItemCount"
 import { Button, Card, CardContent, CardMedia, Typography } from '@mui/material';
 import { CardActionArea } from '@mui/material';
 import { Link } from 'react-router-dom';
+import { CartContext } from "../../Context/CartContext"
 
 const ItemDetail = ({ id, nombre, descripcion, precio, stock, categoria, imagen, currency }) => {
 
     const [qtyAdded, setQtyAdded] = useState(0)
+    const { addItem } = useContext(CartContext)
 
     const onAdd = (cantidad) => {
         setQtyAdded(cantidad)
+
+        const item = {
+            id, nombre, precio
+        }
+        addItem(item, cantidad)
     };
 
     return (

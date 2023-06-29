@@ -35,7 +35,7 @@ const Navbar = () => {
                         <NavBarMenu nombreTienda={nombreTienda} />
                         <Link to={"/Cart"}>
                             <Box sx={{ flexGrow: 0 }}>
-                                <CartWidget cantidades="0" />
+                                <CartWidget />
                             </Box>
                         </Link>
                     </Toolbar>

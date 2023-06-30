@@ -14,9 +14,7 @@ const ItemDetailContainer = () => {
         const fetchData = async () => {
             try {
                 const response = await new Promise(resolve =>
-                    setTimeout(() => {
-                        resolve(axios.get("../../datos.json"))
-                    }, 1000)
+                    resolve(axios.get("../../datos.json"))
                 )
                 const item = response.data.find((producto) => producto.id === parseInt(id))
                 setProduct(item)

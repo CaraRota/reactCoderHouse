@@ -8,11 +8,14 @@ import ErrorPage from './components/Error/ErrorPage'
 import CategoryPage from './Views/CategoryPage/CategoryPage'
 import CartPage from './Views/CartPage/CartPage'
 import { CartProvider } from './Context/CartContext'
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
     return (
         <>
             <Router>
+                <ToastContainer />
                 <CartProvider>
                     <NavBar />
                     <Routes>

@@ -15,9 +15,7 @@ const ItemListContainer = ({ greeting }) => {
         const fetchData = async () => {
             try {
                 const response = await new Promise(resolve =>
-                    setTimeout(() => {
-                        resolve(axios.get("../../datos.json"))
-                    }, 1000)
+                    resolve(axios.get("../../datos.json"))
                 )
                 setProductos(response.data)
             } catch (error) {

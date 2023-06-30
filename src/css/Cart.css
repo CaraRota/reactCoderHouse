@@ -10,4 +10,11 @@
   display: flex;
   justify-content: center;
   margin-top: 10px;
+}
+
+.removeItem {
+  cursor: pointer;
+}
+.removeItem:hover {
+  color: red;
 }/*# sourceMappingURL=Cart.css.map */

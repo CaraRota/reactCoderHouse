@@ -5,7 +5,7 @@ import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Button } from '@mui/material/';
 
 const Cart = () => {
-    const { cart, addItem, removeAll, totalQty, total } = useContext(CartContext)
+    const { cart, addItem, removeAll, totalQty, total, removeItem } = useContext(CartContext)
 
     if (totalQty === 0) {
         return <div>No hay productos en el carro</div>
@@ -24,18 +24,18 @@ const Cart = () => {
                         </TableRow>
                     </TableHead>
                     <TableBody>
-                        {cart.map((cartt) => (
+                        {cart.map((item) => (
                             <TableRow
-                                key={cartt.id}
+                                key={item.id}
                                 sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
                             >
                                 <TableCell component="th" scope="row">
-                                    {cartt.nombre}
+                                    {item.nombre}
                                 </TableCell>
-                                <TableCell align="right">{cartt.qty}</TableCell>
-                                <TableCell align="right">${cartt.precio.toLocaleString("es-AR")}</TableCell>
-                                <TableCell align="right">${(cartt.qty * cartt.precio).toLocaleString("es-AR")}</TableCell>
-                                <TableCell align="right"><DeleteForeverIcon /></TableCell>
+                                <TableCell align="right">{item.qty}</TableCell>
+                                <TableCell align="right">${item.precio.toLocaleString("es-AR")}</TableCell>
+                                <TableCell align="right">${(item.qty * item.precio).toLocaleString("es-AR")}</TableCell>
+                                <TableCell onClick={() => removeItem(item.id)} align="right"><DeleteForeverIcon className='removeItem' /></TableCell>
                             </TableRow>
                         ))}
                     </TableBody>

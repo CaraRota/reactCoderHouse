@@ -11,3 +11,11 @@
     justify-content: center;
     margin-top: 10px;
 }
+
+.removeItem {
+    cursor: pointer;
+
+    &:hover {
+        color: red;
+    }
+}

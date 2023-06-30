@@ -21,7 +21,7 @@ export const CartProvider = ({ children }) => {
         const updateCart = cart.filter(prod => prod.id !== itemId)
         setCart(updateCart)
         setTotalQty(totalQty - itemId.qty)
-        setTotal(total - (qty * itemId.precio))
+        setTotal(total - (itemId.qty * itemId.precio))
     }
     const removeAll = () => {
         setCart([])

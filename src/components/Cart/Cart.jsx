@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import "../../css/Cart.css"
 import { CartContext } from '../../Context/CartContext'
 import { Button, Box } from '@mui/material/';
+import { Link } from 'react-router-dom';
 import CartItem from '../CartItem/CartItem';
 import CartNoItem from '../CartNoItem/CartNoItem';
 import DeleteIcon from '@mui/icons-material/Delete';
@@ -33,7 +34,7 @@ const Cart = () => {
             </div>
             <div className='cart-btns-container'>
                 <div className='cart-btns'><Button onClick={() => removeAll()} variant='contained' color='error' startIcon={<DeleteIcon />}>Eliminar Pedido</Button></div>
-                <div className='cart-btns'><Button onClick={() => removeAll()} variant='contained' color='success' endIcon={<TelegramIcon />}>Realizar Pedido</Button></div>
+                <div className='cart-btns'><Link to={"/checkout"}><Button variant='contained' color='success' endIcon={<TelegramIcon />}>Checkout</Button></Link></div>
             </div>
         </>
     )

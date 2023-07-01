@@ -48,7 +48,7 @@ const NavbarMenu = ({ nombreTienda }) => {
                 >
                     <MenuItem sx={{ display: "flex", justifyContent: "center" }} onClick={handleCloseNavMenu}>
                         <ul className='menuListaMobile'>
-                            <Link className='link-category' to={`/Category/${"Celulares"}`} >
+                            <Link className='link-category' to={`/Category/Celulares`} >
                                 <li className='menuBtn'
                                     onClick={handleCloseNavMenu}
                                     sx={{ my: 2, color: 'white', display: 'block' }}
@@ -56,7 +56,7 @@ const NavbarMenu = ({ nombreTienda }) => {
                                     Celulares
                                 </li>
                             </Link>
-                            <Link className='link-category' to={`/Category/${"Tablets"}`} >
+                            <Link className='link-category' to={`/Category/Tablets`} >
                                 <li className='menuBtn'
                                     onClick={handleCloseNavMenu}
                                     sx={{ my: 2, color: 'white', display: 'block' }}
@@ -64,7 +64,7 @@ const NavbarMenu = ({ nombreTienda }) => {
                                     Tablets
                                 </li>
                             </Link>
-                            <Link className='link-category' to={`/Category/${"Notebooks"}`} >
+                            <Link className='link-category' to={`/Category/Notebooks`} >
                                 <li className='menuBtn'
                                     onClick={handleCloseNavMenu}
                                     sx={{ my: 2, color: 'white', display: 'block' }}
@@ -72,7 +72,7 @@ const NavbarMenu = ({ nombreTienda }) => {
                                     Notebooks
                                 </li>
                             </Link>
-                            <Link className='link-category' to={`/Category/${"Auriculares"}`} >
+                            <Link className='link-category' to={`/Category/Auriculares`} >
                                 <li className='menuBtn'
                                     onClick={handleCloseNavMenu}
                                     sx={{ my: 2, color: 'white', display: 'block' }}
@@ -107,7 +107,7 @@ const NavbarMenu = ({ nombreTienda }) => {
             </Box>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                 <ul className='menuLista'>
-                    <Link className='link-category' to={`/Category/${"Celulares"}`} >
+                    <Link className='link-category' to={`/Category/Celulares`} >
                         <li className='menuBtn'
                             onClick={handleCloseNavMenu}
                             sx={{ my: 2, color: 'white', display: 'block' }}
@@ -115,7 +115,7 @@ const NavbarMenu = ({ nombreTienda }) => {
                             Celulares
                         </li>
                     </Link>
-                    <Link className='link-category' to={`/Category/${"Tablets"}`} >
+                    <Link className='link-category' to={`/Category/Tablets`} >
                         <li className='menuBtn'
                             onClick={handleCloseNavMenu}
                             sx={{ my: 2, color: 'white', display: 'block' }}
@@ -123,7 +123,7 @@ const NavbarMenu = ({ nombreTienda }) => {
                             Tablets
                         </li>
                     </Link>
-                    <Link className='link-category' to={`/Category/${"Notebooks"}`} >
+                    <Link className='link-category' to={`/Category/Notebooks`} >
                         <li className='menuBtn'
                             onClick={handleCloseNavMenu}
                             sx={{ my: 2, color: 'white', display: 'block' }}
@@ -131,7 +131,7 @@ const NavbarMenu = ({ nombreTienda }) => {
                             Notebooks
                         </li>
                     </Link>
-                    <Link className='link-category' to={`/Category/${"Auriculares"}`} >
+                    <Link className='link-category' to={`/Category/Auriculares`} >
                         <li className='menuBtn'
                             onClick={handleCloseNavMenu}
                             sx={{ my: 2, color: 'white', display: 'block' }}

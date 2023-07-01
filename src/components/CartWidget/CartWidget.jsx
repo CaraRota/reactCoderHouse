@@ -10,7 +10,7 @@ const CartWidget = () => {
     return (
         <>
             <IconButton aria-label="cart">
-                <Badge badgeContent={totalQty()} color="secondary">
+                <Badge badgeContent={totalQty()} color="error">
                     <ShoppingCartIcon />
                 </Badge>
             </IconButton>

@@ -19,10 +19,12 @@
   color: red;
 }
 
-.empty-cart {
+.cart-btns-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  margin-top: 10px;
+}
+
+.cart-btns {
+  margin: 10px;
 }/*# sourceMappingURL=Cart.css.map */

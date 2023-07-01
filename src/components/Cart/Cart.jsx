@@ -1,27 +1,40 @@
 import React, { useContext } from 'react'
 import "../../css/Cart.css"
 import { CartContext } from '../../Context/CartContext'
-import { Button } from '@mui/material/';
+import { Button, Box } from '@mui/material/';
 import CartItem from '../CartItem/CartItem';
+import CartNoItem from '../CartNoItem/CartNoItem';
+import DeleteIcon from '@mui/icons-material/Delete';
+import TelegramIcon from '@mui/icons-material/Telegram';
 
 const Cart = () => {
     const { cart, removeAll, total } = useContext(CartContext)
-    // let total = cart.reduce((acc, prod) => (acc += prod.precio * prod.qty), 0);
 
     if (!cart.length) {
         return (
-            <div className='empty-cart'>
-                <img src="./assets/empty-cart.png" alt="Empty Cart Image" />
-                No hay productos en el carrito
-            </div>
+            <CartNoItem />
         )
     }
 
     return (
         <>
             <CartItem />
-            <div align="center">Total de su compra: ${total().toLocaleString("es-AR")}</div>
-            <div align="center"><Button onClick={() => removeAll()} variant='contained' color='error' >Eliminar Pedido</Button></div>
+            <div align="center">
+                <Box
+                    sx={{
+                        width: "auto",
+                        height: "auto",
+                        backgroundColor: 'info.main',
+                        marginBottom: 2
+                    }}
+                >
+                    <div style={{ color: "white" }}>Total de su compra: ${total().toLocaleString("es-AR")}</div>
+                </Box>
+            </div>
+            <div className='cart-btns-container'>
+                <div className='cart-btns'><Button onClick={() => removeAll()} variant='contained' color='error' startIcon={<DeleteIcon />}>Eliminar Pedido</Button></div>
+                <div className='cart-btns'><Button onClick={() => removeAll()} variant='contained' color='success' endIcon={<TelegramIcon />}>Realizar Pedido</Button></div>
+            </div>
         </>
     )
 }

@@ -7,7 +7,7 @@ import "../../css/CartNoItem.css"
 const CartNoItem = () => {
     return (
         <div className='empty-cart'>
-            <img src="./assets/empty-cart.png" alt="Empty Cart Image" />
+            <img src="/assets/empty-cart.png" alt="Empty Cart Image" />
             <div><Alert variant="outlined" severity="error">No hay productos en el carrito</Alert></div>
             <Link to="/" className='back-home-btn'><Button variant='contained' startIcon={<CottageIcon />} >VOLVER</Button></Link>
         </div>

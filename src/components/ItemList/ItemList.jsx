@@ -5,7 +5,9 @@ import Item from '../Item/Item';
 const ItemList = ({ productos, categoria }) => {
     return (
         <>
-            {categoria}
+            <div className='itemlist-category'>
+                {categoria}
+            </div>
             <section>
                 {productos?.map((product) => (
                     <ul className={"cards"} key={product.id}>

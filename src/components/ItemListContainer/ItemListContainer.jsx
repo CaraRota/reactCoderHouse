@@ -37,9 +37,8 @@ const ItemListContainer = ({ greeting }) => {
 
     return (
         <>
-            {greeting}
             {loading ? <Loader />
-                : categoryId ? <ItemList productos={productos} categoria={<h2 className='category-title'>Categoria: {categoryId}</h2 >} />
+                : categoryId ? <ItemList productos={productos} categoria={<div> {categoryId}</div >} />
                     : <ItemList productos={productos} />}
         </>
     )

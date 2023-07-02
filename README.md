@@ -14,3 +14,7 @@
     "react-router-dom": "^6.11.2",
     "react-toastify": "^9.1.3",
     "styled-components": "^5.3.10"
+
+## Deploy:
+
+https://scamiaecommerce.netlify.app/

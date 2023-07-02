@@ -10,7 +10,6 @@ const CheckoutForm = ({ onConfirm }) => {
 
     const handleConfirm = (e) => {
         e.preventDefault()
-
         const userData = {
             nombre,
             apellido,
@@ -27,24 +26,51 @@ const CheckoutForm = ({ onConfirm }) => {
                 sx={{
                     display: "flex",
                     justifyContent: "center",
-                    marginTop: 5,
                 }}
                 noValidate
                 autoComplete="off"
                 onSubmit={handleConfirm}
             >
-                <div>
+                <div className='form-container'>
                     <div className='form-field'>
-                        <TextField id="outlined-basic" label="Nombre" variant="outlined" value={nombre} onChange={({ target }) => setNombre(target.value)} />
+                        <TextField
+                            fullWidth
+                            required
+                            id="outlined-basic"
+                            label="Nombre"
+                            variant="outlined"
+                            value={nombre}
+                            onChange={({ target }) => setNombre(target.value)} />
                     </div>
                     <div className='form-field'>
-                        <TextField id="outlined-basic" label="Apellido" variant="outlined" value={apellido} onChange={({ target }) => setApellido(target.value)} />
+                        <TextField
+                            fullWidth
+                            required
+                            id="outlined-basic"
+                            label="Apellido"
+                            variant="outlined"
+                            value={apellido}
+                            onChange={({ target }) => setApellido(target.value)} />
                     </div>
                     <div className='form-field'>
-                        <TextField id="outlined-basic" label="Email" variant="outlined" value={email} onChange={({ target }) => setEmail(target.value)} />
+                        <TextField
+                            fullWidth
+                            required
+                            id="outlined-basic"
+                            label="Email"
+                            variant="outlined"
+                            value={email}
+                            onChange={({ target }) => setEmail(target.value)} />
                     </div>
                     <div className='form-field'>
-                        <TextField id="outlined-basic" label="Telefono" variant="outlined" value={telefono} onChange={({ target }) => setTelefono(target.value)} />
+                        <TextField
+                            fullWidth
+                            required
+                            id="outlined-basic"
+                            label="Telefono"
+                            variant="outlined"
+                            value={telefono}
+                            onChange={({ target }) => setTelefono(target.value)} />
                     </div>
                     <div className='form-field-btns'>
                         <Button sx={{ margin: 1 }} variant="contained" type='submit'>Enviar</Button>

@@ -66,13 +66,17 @@ const Checkout = ({ onConfirm }) => {
         return <Loader />
     }
     return (
-        <div>
+        <>
             <div className='checkout-text'>Checkout</div>
             <CheckoutForm onConfirm={sendOrder} />
-            {orderNumber ?
-                <Alert variant="outlined" severity="error">Su orden ha sido creada, este es su ID: {orderNumber}</Alert>
-                : null}
-        </div >
+            {orderNumber &&
+                <div className='alert-order-created-container'>
+                    <Alert className='alert-order-created' variant="outlined" severity="error">
+                        Su orden ha sido creada, este es su ID: {orderNumber}
+                    </Alert>
+                </div>
+            }
+        </>
     )
 }
 

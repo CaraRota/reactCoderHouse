@@ -21,16 +21,7 @@ const Cart = () => {
         <>
             <CartItem />
             <div align="center">
-                <Box
-                    sx={{
-                        width: "auto",
-                        height: "auto",
-                        backgroundColor: 'info.main',
-                        marginBottom: 2
-                    }}
-                >
-                    <div className='total-purchase'>Total de su compra: ${total().toLocaleString("es-AR")}</div>
-                </Box>
+                <div className='total-purchase'>Total de su compra: ${total().toLocaleString("es-AR")}</div>
             </div>
             <div className='cart-btns-container'>
                 <div className='cart-btns'><Button onClick={() => removeAll()} variant='contained' color='error' startIcon={<DeleteIcon />}>Eliminar Pedido</Button></div>

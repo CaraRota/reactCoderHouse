@@ -31,9 +31,11 @@ const ItemDetail = ({ id, nombre, descripcion, precio, stock, categoria, imagen,
                             alt={nombre}
                         />
                         <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
+                            <Typography gutterBottom variant="h6" component="div">
                                 {nombre}
-                                <div>{precio} {currency}</div>
+                            </Typography>
+                            <Typography gutterBottom variant="h6" component="div">
+                                {precio} {currency}
                             </Typography>
                             <Typography variant="body2" component="div" color="text.secondary">
                                 {descripcion}
@@ -47,8 +49,8 @@ const ItemDetail = ({ id, nombre, descripcion, precio, stock, categoria, imagen,
                         }
                     </div>
                     <div style={{ textAlign: "center", marginBottom: "10px" }}>
-                        {stock > 1 ? `${stock} unidade(s) disponibles` : `Solo ${stock} unidad disponible!`} 
-                        </div>
+                        {stock > 1 ? `${stock} unidades disponibles` : `Solo ${stock} unidad disponible!`}
+                    </div>
                 </Card>
             </div>
         </>

@@ -14,9 +14,19 @@ const ItemCount = ({ stock, initial, onAdd }) => {
     return (
         <>
             <ButtonGroup variant="contained" aria-label="primary button group" fullWidth>
-                <Button className='buttons-items' onClick={quitarItem}>-</Button>
-                <Button className='buttons-items' variant="outlined" >{amount}</Button>
-                <Button className='buttons-items' onClick={agregarItem}>+</Button>
+                <Button
+                    onClick={quitarItem}
+                    disabled={amount === 0}>
+                    -
+                </Button>
+                <Button variant="outlined" >
+                    {amount}
+                    </Button>
+                <Button 
+                onClick={agregarItem}
+                disabled={amount === stock}>
+                    +
+                    </Button>
             </ButtonGroup>
             <CardActions sx={{ justifyContent: "center" }}>
                 {/* Cart aun no esta desarrollado */}

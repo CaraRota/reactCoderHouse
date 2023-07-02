@@ -45,6 +45,15 @@ const CheckoutForm = ({ onConfirm }) => {
         onConfirm(userData);
     };
 
+    const handleReset = (e) => {
+        e.preventDefault();
+        setNombre("")
+        setApellido("")
+        setEmail("")
+        setTelefono("")
+        setErrors({})
+    }
+
     return (
         <main>
             <Box
@@ -117,13 +126,7 @@ const CheckoutForm = ({ onConfirm }) => {
                         <Button
                             sx={{ margin: 1 }}
                             variant="contained"
-                            onClick={() => {
-                                setNombre('');
-                                setApellido('');
-                                setEmail('');
-                                setTelefono('');
-                                setErrors({});
-                            }}
+                            onClick={handleReset}
                         >
                             Borrar
                         </Button>

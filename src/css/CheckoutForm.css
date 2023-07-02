@@ -1,0 +1,13 @@
+.form-field {
+  margin-top: 10px;
+}
+
+.form-field-btn {
+  margin: 10px;
+}
+
+.form-field-btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}/*# sourceMappingURL=CheckoutForm.css.map */

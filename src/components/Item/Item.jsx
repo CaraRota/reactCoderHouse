@@ -1,8 +1,11 @@
 import { Button, CardActionArea, Typography, CardMedia, CardContent, Card } from '@mui/material';
+import DiscountIcon from '@mui/icons-material/Discount';
 import { Link } from 'react-router-dom';
 import "../../css/Item.css"
 
 const Item = ({ id, nombre, descripcion, precio, stock, categoria, imagen, currency }) => {
+    const cuotas = 6;
+
     return (
         <>
             <div>
@@ -10,23 +13,24 @@ const Item = ({ id, nombre, descripcion, precio, stock, categoria, imagen, curre
                     <CardActionArea>
                         <CardMedia className='img-card-1'
                             component="img"
-                            height="250"
-                            width="250"
                             image={imagen}
                             alt={nombre}
                         />
                         <CardContent>
-                            <Typography gutterBottom variant="h5" component="div">
+                            <Typography variant="h5">
+                                {precio.toLocaleString("es-AR")} {currency}
+                            </Typography>
+                            <Typography gutterBottom variant="body1" color="text.secondary" component="div">
                                 {nombre}
                             </Typography>
-                            <Typography variant="body2" color="text.secondary">
-                                {precio} {currency}
+                            <Typography gutterBottom className='discount-item' variant="body3" component="div">
+                                <DiscountIcon fontSize='small' /> {cuotas}x {(precio / cuotas).toFixed(2)} USD
                             </Typography>
                         </CardContent>
                     </CardActionArea>
-                    <Link to={`/Item/${id}`} >
-                        <Button sx={{ mb: 2 }} variant="outlined">Ver Detalle</Button>
-                    </Link>
+                    {stock < 1 ? <Button sx={{ mb: 2 }} className='no-stock-item' variant="outlined" color="error">Sin Stock</Button>
+                        : <Link to={`/Item/${id}`}><Button sx={{ mb: 2 }} variant="outlined">Ver Detalle</Button></Link>
+                    }
                 </Card>
             </div>
         </>

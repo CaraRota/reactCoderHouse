@@ -10,6 +10,7 @@ import CartPage from './Views/CartPage/CartPage'
 import CheckoutPage from "./Views/CheckoutPage/CheckoutPage"
 import { CartProvider } from './Context/CartContext'
 import { ToastContainer } from 'react-toastify';
+import Footer from './components/Footer/Footer'
 
 const App = () => {
     return (
@@ -27,6 +28,7 @@ const App = () => {
                         <Route path="*" element={<ErrorPage />} />
                         <Route />
                     </Routes>
+                    <Footer />
                 </CartProvider>
             </Router>
         </>

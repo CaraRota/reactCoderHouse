@@ -8,7 +8,7 @@ const ItemList = ({ productos, categoria }) => {
             {categoria}
             <section>
                 {productos?.map((product) => (
-                    <ul className='cards' key={product.id}>
+                    <ul className={"cards"} key={product.id}>
                         <Item
                             id={product.id}
                             nombre={product.nombre}

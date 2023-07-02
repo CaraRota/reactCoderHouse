@@ -24,8 +24,18 @@ const Cart = () => {
                 <div className='total-purchase'>Total de su compra: ${total().toLocaleString("es-AR")}</div>
             </div>
             <div className='cart-btns-container'>
-                <div className='cart-btns'><Button onClick={() => removeAll()} variant='contained' color='error' startIcon={<DeleteIcon />}>Eliminar Pedido</Button></div>
-                <div className='cart-btns'><Link to={"/Checkout"}><Button variant='contained' color='success' endIcon={<TelegramIcon />}>Checkout</Button></Link></div>
+                <div className='cart-btns'>
+                    <Button onClick={() => removeAll()} variant='contained' color='error' startIcon={<DeleteIcon />}>
+                        Eliminar Pedido
+                    </Button>
+                </div>
+                <div className='cart-btns'>
+                    <Link to={"/Checkout"}>
+                        <Button variant='contained' color='success' endIcon={<TelegramIcon />}>
+                            Checkout
+                        </Button>
+                    </Link>
+                </div>
             </div>
         </>
     )

@@ -1,23 +1,24 @@
 import React, { useContext } from 'react'
+import "../../css/CartItem.css"
 import DeleteForeverIcon from '@mui/icons-material/DeleteForever';
 import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper } from '@mui/material/';
 import { CartContext } from '../../Context/CartContext';
-import "../../css/CartItem.css"
 
 const CartItem = () => {
     const { cart, removeItem } = useContext(CartContext)
     return (
         <>
-            <div className='cart-text'>Carrito</div>
-            <TableContainer component={Paper} sx={{ marginTop: 5 }}>
+            <div className='cart-text'>Carrito
+            </div>
+            <TableContainer sx={{ maxWidth: 750, margin: "auto" }} component={Paper}>
                 <Table aria-label="simple table">
                     <TableHead>
                         <TableRow>
-                            <TableCell>Descripcion</TableCell>
-                            <TableCell align="right">Cantidad</TableCell>
-                            <TableCell align="right">Precio u.</TableCell>
-                            <TableCell align="right">Subtotal</TableCell>
-                            <TableCell align="right">Eliminar</TableCell>
+                            <TableCell sx={{ fontWeight: 700 }}>Descripcion</TableCell>
+                            <TableCell sx={{ fontWeight: 700 }} align="right">Cantidad</TableCell>
+                            <TableCell sx={{ fontWeight: 700 }} align="right">Precio u.</TableCell>
+                            <TableCell sx={{ fontWeight: 700 }} align="right">Subtotal</TableCell>
+                            <TableCell sx={{ fontWeight: 700 }} align="right">Eliminar</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>

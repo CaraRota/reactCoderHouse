@@ -46,7 +46,9 @@ const ItemDetail = ({ id, nombre, descripcion, precio, stock, categoria, imagen,
                             : <ItemCount stock={stock} onAdd={onAdd} initial={1} />
                         }
                     </div>
-                    <div style={{ textAlign: "center", marginBottom: "10px" }}>{stock} unidade(s) disponibles</div>
+                    <div style={{ textAlign: "center", marginBottom: "10px" }}>
+                        {stock > 1 ? `${stock} unidade(s) disponibles` : `Solo ${stock} unidad disponible!`} 
+                        </div>
                 </Card>
             </div>
         </>

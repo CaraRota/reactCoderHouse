@@ -18,3 +18,8 @@
 ## Deploy:
 
 https://scamiaecommerce.netlify.app/
+
+## Project Developer:
+
+Sebastian Camia
+https://www.linkedin.com/in/sebastian-emanuel-camia-trefs/

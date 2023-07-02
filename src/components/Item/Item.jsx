@@ -3,14 +3,14 @@ import DiscountIcon from '@mui/icons-material/Discount';
 import { Link } from 'react-router-dom';
 import "../../css/Item.css"
 
-const Item = ({ id, nombre, descripcion, precio, stock, categoria, imagen, currency }) => {
+const Item = ({ id, nombre, precio, stock, imagen, currency }) => {
     const cuotas = 6;
 
     return (
         <>
             <div>
                 <Card>
-                    <CardActionArea>
+                    <CardActionArea className='item-card-area'>
                         <CardMedia className='img-card-1'
                             component="img"
                             image={imagen}

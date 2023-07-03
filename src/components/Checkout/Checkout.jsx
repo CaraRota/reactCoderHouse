@@ -24,6 +24,7 @@ const Checkout = ({ onConfirm }) => {
                 },
                 productos: cart,
                 total: total(),
+                fecha: new Date().toLocaleDateString("es-AR")
             }
             const batch = writeBatch(db)
             const noStock = []

@@ -3,10 +3,11 @@ import { Button, Box, TextField } from '@mui/material/';
 import '../../css/CheckoutForm.css';
 
 const CheckoutForm = ({ onConfirm }) => {
-    const [nombre, setNombre] = useState('');
-    const [apellido, setApellido] = useState('');
-    const [email, setEmail] = useState('');
-    const [telefono, setTelefono] = useState('');
+    const [nombre, setNombre] = useState("");
+    const [apellido, setApellido] = useState("");
+    const [email, setEmail] = useState("");
+    const [repeatEmail, setRepeatEmail] = useState("")
+    const [telefono, setTelefono] = useState("");
     const [errors, setErrors] = useState({});
 
     const handleConfirm = (e) => {
@@ -30,6 +31,9 @@ const CheckoutForm = ({ onConfirm }) => {
         } else if (!/^\d+$/.test(telefono)) {
             validationErrors.telefono = "El campo Telefono solo acepta numeros"
         }
+        if (repeatEmail !== email) {
+            validationErrors.repeatEmail = "Por favor verifique que los dos emails sean iguales"
+        }
 
         if (Object.keys(validationErrors).length > 0) {
             setErrors(validationErrors);
@@ -52,6 +56,7 @@ const CheckoutForm = ({ onConfirm }) => {
         setEmail("")
         setTelefono("")
         setErrors({})
+        setRepeatEmail("")
     }
 
     return (
@@ -104,6 +109,19 @@ const CheckoutForm = ({ onConfirm }) => {
                             onChange={({ target }) => setEmail(target.value)}
                             error={!!errors.email}
                             helperText={errors.email}
+                        />
+                    </div>
+                    <div className="form-field">
+                        <TextField
+                            fullWidth
+                            required
+                            id="repeatEmail"
+                            label="Repetir Email"
+                            variant="outlined"
+                            value={repeatEmail}
+                            onChange={({ target }) => setRepeatEmail(target.value)}
+                            error={!!errors.repeatEmail}
+                            helperText={errors.repeatEmail}
                         />
                     </div>
                     <div className="form-field">

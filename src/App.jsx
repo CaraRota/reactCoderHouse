@@ -8,6 +8,7 @@ import ErrorPage from './components/Error/ErrorPage'
 import CategoryPage from './Views/CategoryPage/CategoryPage'
 import CartPage from './Views/CartPage/CartPage'
 import CheckoutPage from "./Views/CheckoutPage/CheckoutPage"
+import SearchBarPage from './Views/SearchBarPage/SearchBarPage'
 import { CartProvider } from './Context/CartContext'
 import { ToastContainer } from 'react-toastify';
 import Footer from './components/Footer/Footer'
@@ -25,6 +26,7 @@ const App = () => {
                         <Route path='/Category/:categoryId' element={<CategoryPage />} />
                         <Route path='/Cart' element={<CartPage />} />
                         <Route path='/Checkout' element={<CheckoutPage />} />
+                        <Route path='/Search' element={<SearchBarPage />} />
                         <Route path="*" element={<ErrorPage />} />
                         <Route />
                     </Routes>

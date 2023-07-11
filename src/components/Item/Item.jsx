@@ -22,7 +22,7 @@ const Item = ({ id, nombre, precio, stock, imagen, currency }) => {
             <div>
                 <Card>
                     <CardActionArea className='item-card-area'>
-                        {loading ? <Skeleton variant="rounded" width={250} height={250} />
+                        {loading ? <Skeleton sx={{ bgcolor: 'grey.600' }} variant="rounded" width={250} height={250} />
                             : stock < 1 ?
                                 <div className='no-stock-img'>
                                     <CardMedia className='img-card-1'

@@ -35,7 +35,7 @@ const ItemDetail = ({ id, nombre, descripcion, precio, stock, categoria, imagen,
             <div className='card-container'>
                 <Card sx={{ maxWidth: 300 }}>
                     <CardActionArea>
-                        {loading ? <Skeleton variant="rounded" width={300} height={300} />
+                        {loading ? <Skeleton sx={{ bgcolor: 'grey.600' }} variant="rounded" width={300} height={300} />
                             : <CardMedia
                                 component="img"
                                 image={imagen}

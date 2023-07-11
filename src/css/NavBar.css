@@ -10,10 +10,11 @@
 }
 
 .menuListaMobile {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
   background-color: #1976d2;
   list-style: none;
-  align-items: center;
-  justify-content: center;
 }
 
 .cart-number {

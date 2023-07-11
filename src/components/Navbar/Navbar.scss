@@ -1,18 +1,20 @@
-.menu-navbar-container{
+.menu-navbar-container {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
 .menuLista {
     list-style: none;
     display: flex;
 }
 
 .menuListaMobile {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     background-color: #1976d2;
     list-style: none;
-    align-items: center;
-    justify-content: center;
 }
 
 .cart-number {
@@ -39,8 +41,6 @@
     align-items: center;
 }
 
-
-
 /* Bounce To Top */
 .menuBtn {
     --b: 1px;
@@ -48,7 +48,6 @@
     --s: .15em;
     /* size of the corner */
     --c: #ffffff;
-
     padding: calc(.05em + var(--s)) calc(.3em + var(--s));
     color: var(--c);
     --_p: var(--s);

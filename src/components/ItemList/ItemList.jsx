@@ -3,6 +3,7 @@ import "../../css/ItemList.css"
 import Item from '../Item/Item';
 
 const ItemList = ({ productos, categoria }) => {
+
     return (
         <>
             <div className='itemlist-category'>
@@ -17,8 +18,8 @@ const ItemList = ({ productos, categoria }) => {
                             descripcion={product.descripcion}
                             precio={product.precio}
                             stock={product.stock}
-                            categoria={product.categoria}
                             imagen={product.imagen}
+                            categoria={product.categoria}
                             currency={"USD"}
                         />
                     </ul>

@@ -1,8 +1,8 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import "../../css/ItemDetail.css"
 import ItemCount from "../ItemCount/ItemCount"
 import { Button, Card, CardContent, CardMedia, Typography } from '@mui/material';
-import { CardActionArea } from '@mui/material';
+import { CardActionArea, Skeleton } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { CartContext } from "../../Context/CartContext"
 
@@ -10,6 +10,7 @@ const ItemDetail = ({ id, nombre, descripcion, precio, stock, categoria, imagen,
 
     const [qtyAdded, setQtyAdded] = useState(0)
     const { addItem } = useContext(CartContext)
+    const [loading, setLoading] = useState(true)
 
     const onAdd = (cantidad) => {
         setQtyAdded(cantidad)
@@ -20,16 +21,27 @@ const ItemDetail = ({ id, nombre, descripcion, precio, stock, categoria, imagen,
         addItem(item, cantidad)
     };
 
+    useEffect(() => {
+        const imageLoader = new Image();
+        imageLoader.src = imagen;
+        imageLoader.onload = () => {
+            setLoading(false);
+        };
+    }, [imagen]);
+
+
     return (
         <>
             <div className='card-container'>
                 <Card sx={{ maxWidth: 300 }}>
                     <CardActionArea>
-                        <CardMedia
-                            component="img"
-                            image={imagen}
-                            alt={nombre}
-                        />
+                        {loading ? <Skeleton variant="rounded" width={300} height={300} />
+                            : <CardMedia
+                                component="img"
+                                image={imagen}
+                                alt={nombre}
+                            />
+                        }
                         <CardContent>
                             <Typography gutterBottom variant="h6" component="div">
                                 {nombre}

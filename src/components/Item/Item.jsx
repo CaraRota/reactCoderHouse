@@ -1,31 +1,43 @@
-import { Button, CardActionArea, Typography, CardMedia, CardContent, Card } from '@mui/material';
+import * as React from 'react';
+import { useEffect, useState } from 'react';
+import { Skeleton, Button, CardActionArea, Typography, CardMedia, CardContent, Card } from '@mui/material';
 import DiscountIcon from '@mui/icons-material/Discount';
 import { Link } from 'react-router-dom';
 import "../../css/Item.css"
 
 const Item = ({ id, nombre, precio, stock, imagen, currency }) => {
     const cuotas = 6;
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        const imageLoader = new Image();
+        imageLoader.src = imagen;
+        imageLoader.onload = () => {
+            setLoading(false);
+        };
+    }, [imagen]);
 
     return (
         <>
             <div>
                 <Card>
                     <CardActionArea className='item-card-area'>
-                        {stock < 1 ?
-                            <div className='no-stock-img'>
-                                <CardMedia className='img-card-1'
-                                    component="img"
-                                    image={imagen}
-                                    alt={nombre}
-                                />
-                            </div>
-                            : <Link to={`/Item/${id}`}>
-                                <CardMedia className='img-card-1'
-                                    component="img"
-                                    image={imagen}
-                                    alt={nombre}
-                                />
-                            </Link>
+                        {loading ? <Skeleton variant="rounded" width={250} height={250} />
+                            : stock < 1 ?
+                                <div className='no-stock-img'>
+                                    <CardMedia className='img-card-1'
+                                        component="img"
+                                        image={imagen}
+                                        alt={nombre}
+                                    />
+                                </div>
+                                : <Link to={`/Item/${id}`}>
+                                    <CardMedia className='img-card-1'
+                                        component="img"
+                                        image={imagen}
+                                        alt={nombre}
+                                    />
+                                </Link>
                         }
                         <CardContent>
                             <Typography variant="h5">

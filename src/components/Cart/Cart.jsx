@@ -1,12 +1,13 @@
 import React, { useContext } from 'react'
 import "../../css/Cart.css"
 import { CartContext } from '../../Context/CartContext'
-import { Button, Box } from '@mui/material/';
+import { Button, Alert } from '@mui/material/';
 import { Link } from 'react-router-dom';
 import CartItem from '../CartItem/CartItem';
 import CartNoItem from '../CartNoItem/CartNoItem';
 import DeleteIcon from '@mui/icons-material/Delete';
 import TelegramIcon from '@mui/icons-material/Telegram';
+import ShoppingCartCheckoutIcon from '@mui/icons-material/ShoppingCartCheckout';
 
 const Cart = () => {
     const { cart, removeAll, total } = useContext(CartContext)
@@ -21,7 +22,9 @@ const Cart = () => {
         <>
             <CartItem />
             <div align="center">
-                <div className='total-purchase'>Total de su compra: ${total().toLocaleString("es-AR")}</div>
+                <Alert className='total-purchase' icon={<ShoppingCartCheckoutIcon fontSize="inherit" />} severity="success">
+                    Total de su compra: {total().toLocaleString("es-AR")} USD
+                </Alert>
             </div>
             <div className='cart-btns-container'>
                 <div className='cart-btns'>

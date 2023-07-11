@@ -20,7 +20,6 @@ const NavbarMenu = ({ nombreTienda }) => {
             <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                 <IconButton
                     size="large"
-                    aria-label="account of current user"
                     aria-controls="menu-appbar"
                     aria-haspopup="true"
                     onClick={handleOpenNavMenu}
@@ -46,7 +45,7 @@ const NavbarMenu = ({ nombreTienda }) => {
                         display: { xs: 'block', md: 'none' },
                     }}
                 >
-                    <MenuItem sx={{ display: "flex", justifyContent: "center" }} onClick={handleCloseNavMenu}>
+                    <MenuItem onClick={handleCloseNavMenu}>
                         <ul className='menuListaMobile'>
                             <Link className='link-category' to={`/Category/Celulares`} >
                                 <li className='menuBtn'
@@ -84,7 +83,7 @@ const NavbarMenu = ({ nombreTienda }) => {
                     </MenuItem>
                 </Menu>
             </Box>
-            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+            <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'flex' } }}>
                 <Link className='nombreTiendaMobile' to={"/"}>
                     <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
                     <Typography

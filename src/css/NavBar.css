@@ -1,3 +1,9 @@
+.menu-navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .menuLista {
   list-style: none;
   display: flex;
@@ -8,37 +14,6 @@
   list-style: none;
   align-items: center;
   justify-content: center;
-}
-
-.menuBtn {
-  --b: 1px;
-  /* border thickness */
-  --s: .15em;
-  /* size of the corner */
-  --c: #ffffff;
-  padding: calc(0.05em + var(--s)) calc(0.3em + var(--s));
-  color: var(--c);
-  --_p: var(--s);
-  background: conic-gradient(from 90deg at var(--b) var(--b), rgba(0, 0, 0, 0) 90deg, var(--c) 0) var(--_p) var(--_p)/calc(100% - var(--b) - 2 * var(--_p)) calc(100% - var(--b) - 2 * var(--_p));
-  transition: 0.3s linear, color 0s, background-color 0s;
-  outline: var(--b) solid rgba(0, 0, 0, 0);
-  outline-offset: 0.2em;
-  font-family: system-ui, sans-serif;
-  font-weight: bold;
-  font-size: 1rem;
-  cursor: pointer;
-  border: none;
-  margin: 0.1em;
-}
-.menuBtn:hover,
-.menuBtn :focus-visible {
-  --_p: 0px;
-  outline-color: var(--c);
-  outline-offset: 0.05em;
-}
-.menuBtn:active {
-  background: var(--c);
-  color: #000;
 }
 
 .cart-number {
@@ -63,4 +38,54 @@
   text-decoration: none;
   display: flex;
   align-items: center;
+}
+
+/* Bounce To Top */
+.menuBtn {
+  --b: 1px;
+  /* border thickness */
+  --s: .15em;
+  /* size of the corner */
+  --c: #ffffff;
+  padding: calc(0.05em + var(--s)) calc(0.3em + var(--s));
+  color: var(--c);
+  --_p: var(--s);
+  font-family: system-ui, sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  margin: 0.1em;
+  display: inline-block;
+  vertical-align: middle;
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  transition-property: color;
+  transition-duration: 0.5s;
+}
+.menuBtn:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #2098D1;
+  transform: scaleY(0);
+  transform-origin: 50% 100%;
+  transition-property: transform;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-out;
+}
+.menuBtn:hover,
+.menuBtn :focus,
+.menuBtn :active {
+  color: white;
+}
+.menuBtn:hover:before,
+.menuBtn :focus:before,
+.menuBtn :active:before {
+  transform: scaleY(1);
+  transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 }/*# sourceMappingURL=Navbar.css.map */

@@ -11,11 +11,22 @@ const Item = ({ id, nombre, precio, stock, imagen, currency }) => {
             <div>
                 <Card>
                     <CardActionArea className='item-card-area'>
-                        <CardMedia className='img-card-1'
-                            component="img"
-                            image={imagen}
-                            alt={nombre}
-                        />
+                        {stock < 1 ?
+                            <div className='no-stock-img'>
+                                <CardMedia className='img-card-1'
+                                    component="img"
+                                    image={imagen}
+                                    alt={nombre}
+                                />
+                            </div>
+                            : <Link to={`/Item/${id}`}>
+                                <CardMedia className='img-card-1'
+                                    component="img"
+                                    image={imagen}
+                                    alt={nombre}
+                                />
+                            </Link>
+                        }
                         <CardContent>
                             <Typography variant="h5">
                                 {precio.toLocaleString("es-AR")} {currency}

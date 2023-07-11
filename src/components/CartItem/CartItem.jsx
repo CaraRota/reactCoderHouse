@@ -31,8 +31,8 @@ const CartItem = () => {
                                     {item.nombre}
                                 </TableCell>
                                 <TableCell align="right">{item.qty}</TableCell>
-                                <TableCell align="right">${item.precio.toLocaleString("es-AR")}</TableCell>
-                                <TableCell align="right">${(item.qty * item.precio).toLocaleString("es-AR")}</TableCell>
+                                <TableCell align="right">{item.precio.toLocaleString("es-AR")} USD</TableCell>
+                                <TableCell align="right">{(item.qty * item.precio).toLocaleString("es-AR")} USD</TableCell>
                                 <TableCell onClick={() => removeItem(item.id)} align="right"><DeleteForeverIcon className='removeItem' /></TableCell>
                             </TableRow>
                         ))}

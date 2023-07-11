@@ -1,9 +1,30 @@
-.item-card-area{
+.item-card-area {
     cursor: default !important;
 }
+
 .img-card-1 {
     max-width: 250px;
     max-height: 250px;
+}
+
+.no-stock-img {
+    filter: grayscale(100%);
+
+    &:before {
+        content: "Sin stock";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 50px;
+        color: #fff;
+        font-size: 1.2rem;
+        font-weight: 700;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
 }
 
 .no-stock-item {

@@ -3,19 +3,19 @@
 
     &:hover {
         color: red;
+        transition: .5s;
+        transform: scale(1.1);
     }
+
 }
 
 .total-purchase {
-    color: white;
-    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
     text-transform: uppercase;
-    text-shadow: 1px 1px black;
-    background-color: #d32f2f;
-    width: 500px;
-    max-width: 500px;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    width: 400px;
+    max-width: 400px;
+    margin-top: 1.2rem;
 }
 
 .cart-btns-container {
@@ -25,5 +25,5 @@
 }
 
 .cart-btns {
-    margin: 10px;
+    margin: 10px
 }
